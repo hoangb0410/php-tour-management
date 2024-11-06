@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tour_types', function (Blueprint $table) {
+        Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
+            $table->float('rating');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('tour_id')->nullable();
+            $table->unsignedBigInteger('hotel_id')->nullable();
+            $table->string('title');
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }
@@ -24,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tour_types');
+        Schema::dropIfExists('reviews');
     }
 };

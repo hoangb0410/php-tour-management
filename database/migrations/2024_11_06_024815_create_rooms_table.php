@@ -11,10 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tour_types', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('hotel_id');
             $table->string('name');
-            $table->string('description');
+            $table->float('area');
+            $table->integer('bed_number');
+            $table->float('price');
+            $table->integer('guest_number');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -24,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tour_types');
+        Schema::dropIfExists('rooms');
     }
 };

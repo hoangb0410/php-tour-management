@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tour_types', function (Blueprint $table) {
+        Schema::create('add_ons_bookings', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
+            $table->unsignedBigInteger('add_on_id');
+            $table->unsignedBigInteger('booking_id');
+            $table->integer('quantity');
+            $table->float('price');
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tour_types');
+        Schema::dropIfExists('add_ons_bookings');
     }
 };
