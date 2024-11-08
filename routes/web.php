@@ -23,3 +23,22 @@ Route::get('/about', function () {
 Route::get('/test', function () {
     return view('test');
 });
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/signup', function () {
+    return view('signup');
+})->name('signup');
+
+Route::get('/forgot-password', function () {
+    return view('forgot-password');
+})->name('forgot-password');
+
+Route::get('/change-password', function () {
+    return view('change-password');
+})->name('change-password');
+
+Route::get('/list-tour', function () {
+    return view('list-tour');
+})->name('list-tour');

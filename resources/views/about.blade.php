@@ -1,14 +1,18 @@
 @extends('layouts.master')
 @section('content')
-    @include('banner')
+    @include('layouts.header')
+    <section class="banner" style="height: 300px;">
+        <div class="container">
+            <div class="d-flex" style="width: 100%; justify-content: center;">
+                <h1>About us</h1>
+            </div>
+    </section>
+
     <div class="main-content">
         <div class="container">
             <div class="row content" style="margin-top: 100px">
                 <div class="col-sm-6" style="position: relative;">
-                    <img src="{{ asset('assets/picture-1.png') }}" alt="" style="width: 400px; height: 445px;"
-                        class=" main-image">
-                    <img src="{{ asset('assets/picture-2.png') }}" alt="" style="width: 270px; height: 270px;"
-                        class=" second-image">
+                    @include('components.intro')
                 </div>
                 <div class="col-sm-6">
                     <h1 class="mb-5">With NgaoduVietnam, <br> immerses you in majestic <br> space and unique cultural <br>
@@ -72,4 +76,5 @@
             </div>
         </div>
     </div>
+    @include('layouts.footer')
 @endsection

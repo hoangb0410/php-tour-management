@@ -1,19 +1,46 @@
 <div class="fixed-header">
-    <div class="container">
-        <div class="d-flex justify-content-between nav-bar">
-            <div>
-                <a href="{{ url('/') }}">
-                    <img class="logo" src="{{ asset('assets/logo-black.png') }}" alt="logo">
-                </a>
-            </div>
-            <div class="d-flex align-items-center gap-5">
-                <a href="/">Home</a>
-                <a href="{{ route('about') }}">About</a>
-                <a href="#">Tours</a>
-                <a href="#">Hotels</a>
-                <a href="#">Contact</a>
-                <a href="#">Login</a>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex justify-content-between">
+            <a class="navbar-brand" href="{{ url('/') }}">
+                <img class="logo" src="{{ asset('assets/logo-black.png') }}" alt="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse w-100" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('list-tour') }}">Tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hotels</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </nav>
 </div>
+
+<script>
+    document.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>

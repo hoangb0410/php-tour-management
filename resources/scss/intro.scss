@@ -1,0 +1,33 @@
+.intro__main__item {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    &__image {
+        img {
+            max-width: 445px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+.intro__second__item {
+    position: absolute;
+    bottom: 20%;    
+    right: 40%;
+    transform: translate(50%, 50%);
+
+    &__image {
+        img {
+            max-width: 347px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}

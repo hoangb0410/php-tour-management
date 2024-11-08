@@ -2,19 +2,6 @@
     margin-bottom: 100px;
 }
 
-.main-image {
-    width: 100%;
-    height: auto;
-}
-
-.second-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 70%;
-    height: auto;
-}
-
 .destination__item, .culture__item, .tour__item{
     &__image {
         position: relative;
@@ -27,6 +14,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            padding-bottom: 10px;
         }
     }
 }

@@ -1,6 +1,5 @@
 .banner{
     background-image: url('../../public/assets/banner.png');
-    height: 776px; 
     background-size: cover; 
     background-position: center; 
     display: flex; 
@@ -29,9 +28,9 @@
 .tour-hotel-search {
     position: absolute;
     bottom: 0;
-    color: black;
+    color: white;
     z-index: 2;
-    width: 34%;
+    width: 34%; 
 }
 
 .tour-hotel-search-form {
@@ -40,7 +39,7 @@
     z-index: 2;
     padding: 20px;
     // opacity: 0.9;
-    height: 500px;
+    height: 100%;
 }
 
 .select-buttons {
@@ -52,5 +51,4 @@
     flex: 1;
     margin: 0;
     padding: 10px;
-    color: black;
 }

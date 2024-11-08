@@ -1,17 +1,52 @@
 @extends('layouts.master')
 @section('content')
-    @include('banner')
+    @include('layouts.header')
+    <section class="banner" style="height: 776px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-7">
+                    <div class="slogan">
+                        <p>Welcome to NgaoduVietnam</p>
+                        <h1>Perfect place <br /> for your stories</h1>
+                    </div>
+                    <div class="feature">
+                        <div>
+                            <p><i class="bi bi-dot" style="color: var(--primary-color);"></i>Featured</p>
+                        </div>
+                        <div class="d-flex gap-5">
+                            <p><strong>200+</strong> tours</p>
+                            <p><strong>100+</strong> destinations</p>
+                            <p><strong>10+</strong> type of tour</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="tour-hotel-search">
+                        <div class="select-buttons">
+                            <button class="selected-button" id="tour-button">Tours</button>
+                            <button class="unselected-button" id="hotel-button">Hotels</button>
+                        </div>
+                        <div class="tour-hotel-search-form" id="tour-form">
+                            @include('forms.tour-search-form')
+                        </div>
+                        <div class="tour-hotel-search-form" id="hotel-form" style="display: none;">
+                            @include('forms.hotel-search-form')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="feature-bg-white"></div>
+    </section>
     <section class="main-content">
         <div class="container">
             <section class="content row" style="margin-top: 100px">
                 <div class="col-sm-6" style="position: relative;">
-                    <img src="{{ asset('assets/picture-1.png') }}" alt="" style="width: 400px; height: 445px;"
-                        class=" main-image">
-                    <img src="{{ asset('assets/picture-2.png') }}" alt="" style="width: 270px; height: 270px;"
-                        class=" second-image">
+                    @include('components.intro')
                 </div>
                 <div class="col-sm-6">
-                    <h1 class="mb-5">With NgaoduVietnam, <br> immerses you in majestic <br> space and unique cultural <br>
+                    <h1 class="mb-5">With <span style="color: var(--primary-color);">NgaoduVietnam</span>, <br> immerses
+                        you in majestic <br> space and unique cultural <br>
                         features</h1>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem id ut eum. Quam temporibus
                         reprehenderit cupiditate blanditiis nisi sint reiciendis? Cum nobis nemo amet. Mollitia aliquid
@@ -26,8 +61,8 @@
                     <div class="col-4">
                         <h1>Discover fascinating destinations</h1>
                     </div>
-                    <div class="col-8 " style="display: flex; justify-content: flex-end; align-items: flex-end;">
-                        <button class="">View all</button>
+                    <div class="col-8" style="display: flex; justify-content: flex-end; align-items: flex-end;">
+                        <button class="filter-button">View all</button>
                     </div>
                 </div>
                 <div class="destination__list row">
@@ -67,7 +102,7 @@
                         <h1>Attractive tour and interesting experiences</h1>
                     </div>
                     <div class="col-8 " style="display: flex; justify-content: flex-end; align-items: flex-end;">
-                        <button class="">View all</button>
+                        <button class="filter-button">View all</button>
                     </div>
                 </div>
                 <div class="tour__list row">
@@ -113,7 +148,7 @@
                         <h1>Experience the traditional cultural beauties of Vietnam</h1>
                     </div>
                     <div class="col-6" style="display: flex; justify-content: flex-end; align-items: flex-end;">
-                        <button class="">View all</button>
+                        <button class="filter-button">View all</button>
                     </div>
                 </div>
                 <div class="culture__list row">
@@ -157,7 +192,8 @@
             </section>
             <section class="content">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h1>Leave us an email,<br> to get the latest deals</h1>
+                    <h1>Leave us an email,<br>to get<span style="color: var(--primary-color);"> the latest deals</span>
+                    </h1>
                     <form action="" class="d-flex gap-3">
                         <div class="input-container">
                             <i class="fa-regular fa-envelope"></i>
@@ -169,6 +205,25 @@
             </section>
         </div>
     </section>
-    </div>
-    </section>
+    @include('layouts.footer')
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#tour-button').click(function() {
+                $(this).addClass('selected-button').removeClass('unselected-button');
+                $('#hotel-button').addClass('unselected-button').removeClass('selected-button');
+                $('#tour-form').show();
+                $('#hotel-form').hide();
+            });
+
+            $('#hotel-button').click(function() {
+                $(this).addClass('selected-button').removeClass('unselected-button');
+                $('#tour-button').addClass('unselected-button').removeClass('selected-button');
+                $('#hotel-form').show();
+                $('#tour-form').hide();
+            });
+        });
+    </script>
+@endpush
