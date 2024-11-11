@@ -45,10 +45,18 @@
                                 <div class="filter-content">
                                     <div class="budget-range-containe filter-category">
                                         <label>Budget:</label>
-                                        <div class="slider-wrapper">
-                                            <input type="range" min="150" max="1000" value="150"
-                                                id="budget-range">
-                                            <span id="rangeValue" class="range-value-label">$150</span>
+                                        <div class="slider-wrapper mt-5">
+                                            <div class="double_range_slider_box">
+                                                <div class="double_range_slider">
+                                                    <span class="range_track" id="range_track"></span>
+                                                    <input type="range" class="min" min="150" max="1000"
+                                                        value="150" step="1">
+                                                    <input type="range" class="max" min="150" max="1000"
+                                                        value="1000" step="1">
+                                                    <div class="minvalue">$150</div>
+                                                    <div class="maxvalue">$1000</div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="filter-category">
@@ -349,6 +357,41 @@
 
 @push('scripts')
     <script>
+        // $(document).ready(function() {
+        //     $('#filter-btn').on('click', function() {
+        //         $('#filter-dropdown').toggle();
+        //     });
+
+        //     $(document).on('click', function(event) {
+        //         if (!$(event.target).closest('#filter-btn, #filter-dropdown').length) {
+        //             $('#filter-dropdown').hide();
+        //         }
+        //     });
+
+        //     $('#clear-btn').on('click', function() {
+        //         $('input[type="checkbox"]').prop('checked', false);
+        //         $('#budget-range').val(150);
+        //         updateLabelPosition();
+        //     });
+
+        //     const $range = $('#budget-range');
+        //     const $rangeValue = $('#rangeValue');
+
+        //     function updateLabelPosition() {
+        //         const rangeWidth = $range.width();
+        //         const min = parseInt($range.attr('min'));
+        //         const max = parseInt($range.attr('max'));
+        //         const val = parseInt($range.val());
+
+        //         const percentage = ((val - min) / (max - min)) * 100;
+
+        //         $rangeValue.text(`$${val}`);
+        //         $rangeValue.css('left', `calc(${percentage}% - ${$rangeValue.width() / 2}px)`);
+        //     }
+
+        //     updateLabelPosition();
+        //     $range.on('input', updateLabelPosition);
+        // });
         $(document).ready(function() {
             $('#filter-btn').on('click', function() {
                 $('#filter-dropdown').toggle();
@@ -362,27 +405,87 @@
 
             $('#clear-btn').on('click', function() {
                 $('input[type="checkbox"]').prop('checked', false);
-                $('#budget-range').val(150);
-                updateLabelPosition();
+                rangeInput[0].value = 150;
+                rangeInput[1].value = 1000;
+                setMinValueOutput();
+                setMaxValueOutput();
+                minRangeFill();
+                maxRangeFill();
+                MinVlaueBubbleStyle();
+                MaxVlaueBubbleStyle();
             });
 
-            const $range = $('#budget-range');
-            const $rangeValue = $('#rangeValue');
+            let minRangeValueGap = 6;
+            const range = document.getElementById("range_track");
+            const minval = document.querySelector(".minvalue");
+            const maxval = document.querySelector(".maxvalue");
+            const rangeInput = document.querySelectorAll("input[type='range']");
 
-            function updateLabelPosition() {
-                const rangeWidth = $range.width();
-                const min = parseInt($range.attr('min'));
-                const max = parseInt($range.attr('max'));
-                const val = parseInt($range.val());
+            let minRange, maxRange, minPercentage, maxPercentage;
 
-                const percentage = ((val - min) / (max - min)) * 100;
+            const minRangeFill = () => {
+                range.style.left = (rangeInput[0].value - rangeInput[0].min) / (rangeInput[0].max - rangeInput[
+                    0].min) * 100 + "%";
+            };
+            const maxRangeFill = () => {
+                range.style.right = 100 - (rangeInput[1].value - rangeInput[1].min) / (rangeInput[1].max -
+                    rangeInput[1].min) * 100 + "%";
+            };
+            const MinVlaueBubbleStyle = () => {
+                minPercentage = (minRange - rangeInput[0].min) / (rangeInput[0].max - rangeInput[0].min) * 100;
+                minval.style.left = minPercentage + "%";
+                minval.style.transform = `translateX(-${minPercentage}%)`;
+            };
+            const MaxVlaueBubbleStyle = () => {
+                maxPercentage = (maxRange - rangeInput[1].min) / (rangeInput[1].max - rangeInput[1].min) * 100;
+                maxval.style.left = maxPercentage + "%";
+                maxval.style.transform = `translateX(-${maxPercentage}%)`;
+            };
 
-                $rangeValue.text(`$${val}`);
-                $rangeValue.css('left', `calc(${percentage}% - ${$rangeValue.width() / 2}px)`);
-            }
+            const setMinValueOutput = () => {
+                minRange = parseInt(rangeInput[0].value);
+                minval.innerHTML = `$${rangeInput[0].value}`;
+            };
+            const setMaxValueOutput = () => {
+                maxRange = parseInt(rangeInput[1].value);
+                maxval.innerHTML = `$${rangeInput[1].value}`;
+            };
 
-            updateLabelPosition();
-            $range.on('input', updateLabelPosition);
+            setMinValueOutput();
+            setMaxValueOutput();
+            minRangeFill();
+            maxRangeFill();
+            MinVlaueBubbleStyle();
+            MaxVlaueBubbleStyle();
+
+            rangeInput.forEach((input) => {
+                input.addEventListener("input", (e) => {
+                    setMinValueOutput();
+                    setMaxValueOutput();
+
+                    minRangeFill();
+                    maxRangeFill();
+
+                    MinVlaueBubbleStyle();
+                    MaxVlaueBubbleStyle();
+
+                    if (maxRange - minRange < minRangeValueGap) {
+                        if (e.target.className === "min") {
+                            rangeInput[0].value = maxRange - minRangeValueGap;
+                            setMinValueOutput();
+                            minRangeFill();
+                            MinVlaueBubbleStyle();
+                            e.target.style.zIndex = "2";
+                        } else {
+                            rangeInput[1].value = minRange + minRangeValueGap;
+                            e.target.style.zIndex = "2";
+                            setMaxValueOutput();
+                            maxRangeFill();
+                            MaxVlaueBubbleStyle();
+                        }
+                    }
+                });
+            });
         });
     </script>
 @endpush
