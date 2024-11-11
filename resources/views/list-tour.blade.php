@@ -43,17 +43,17 @@
                                     <button id="clear-btn">CLEAR</button>
                                 </div>
                                 <div class="filter-content">
-                                    <div class="budget-range-containe filter-category">
+                                    <div class="budget-range-container filter-category">
                                         <label>Budget:</label>
-                                        <div class="slider-wrapper mt-5">
-                                            <div class="double_range_slider_box">
-                                                <div class="double_range_slider">
-                                                    <span class="range_track" id="range_track"></span>
-                                                    <input type="range" class="min" min="150" max="1000"
-                                                        value="150" step="1">
-                                                    <input type="range" class="max" min="150" max="1000"
+                                        <div class="slider-wrapper">
+                                            <div class="double-range-slider-box">
+                                                <div class="double-range-slider">
+                                                    <span class="range-track" id="range-track"></span>
+                                                    <input type="range" class="min" min="0" max="1000"
+                                                        value="0" step="1">
+                                                    <input type="range" class="max" min="0" max="1000"
                                                         value="1000" step="1">
-                                                    <div class="minvalue">$150</div>
+                                                    <div class="minvalue">$0</div>
                                                     <div class="maxvalue">$1000</div>
                                                 </div>
                                             </div>
@@ -370,7 +370,7 @@
 
         //     $('#clear-btn').on('click', function() {
         //         $('input[type="checkbox"]').prop('checked', false);
-        //         $('#budget-range').val(150);
+        //         $('#budget-range').val(0);
         //         updateLabelPosition();
         //     });
 
@@ -405,7 +405,7 @@
 
             $('#clear-btn').on('click', function() {
                 $('input[type="checkbox"]').prop('checked', false);
-                rangeInput[0].value = 150;
+                rangeInput[0].value = 0;
                 rangeInput[1].value = 1000;
                 setMinValueOutput();
                 setMaxValueOutput();
@@ -416,7 +416,7 @@
             });
 
             let minRangeValueGap = 6;
-            const range = document.getElementById("range_track");
+            const range = document.getElementById("range-track");
             const minval = document.querySelector(".minvalue");
             const maxval = document.querySelector(".maxvalue");
             const rangeInput = document.querySelectorAll("input[type='range']");
