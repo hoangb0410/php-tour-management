@@ -41,8 +41,8 @@
                 </div>
             </div>
             <div class="content">
-                <img src="{{ asset('assets/picture-6.png') }}" alt=""
-                    style="width: 100%; height:463px; object-fit: cover;">
+                <img src="{{ asset('assets/pic-6.png') }}" alt=""
+                    style="width: 100%; height: auto; object-fit: cover;">
             </div>
 
             <div class="row content">

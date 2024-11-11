@@ -34,7 +34,44 @@
                         <h1>Attractive tour and interesting experiences</h1>
                     </div>
                     <div class="col-8 " style="display: flex; justify-content: flex-end; align-items: flex-end;">
-                        <button class="">Filter</button>
+                        {{-- <button class="">Filter</button> --}}
+                        <div class="filter-container">
+                            <button id="filter-btn" class="filter-button">Filter</button>
+                            <div id="filter-dropdown" class="filter-dropdown">
+                                <div class="filter-header">
+                                    <span>FILTER BY</span>
+                                    <button id="clear-btn">CLEAR</button>
+                                </div>
+                                <div class="filter-content">
+                                    <div class="budget-range-containe filter-category">
+                                        <label>Budget:</label>
+                                        <div class="slider-wrapper">
+                                            <input type="range" min="150" max="1000" value="150"
+                                                id="budget-range">
+                                            <span id="rangeValue" class="range-value-label">$150</span>
+                                        </div>
+                                    </div>
+                                    <div class="filter-category">
+                                        <label>Duration</label>
+                                        <div>
+                                            <input type="checkbox" id="duration-1"> 0 - 3 days<br>
+                                            <input type="checkbox" id="duration-2"> 3 - 5 days<br>
+                                            <input type="checkbox" id="duration-3"> 5 - 7 days<br>
+                                            <input type="checkbox" id="duration-4"> Over 1 week<br>
+                                        </div>
+                                    </div>
+                                    <label>Type of Tours</label>
+                                    <div>
+                                        <input type="checkbox" id="tour-type-1"> City-Break<br>
+                                        <input type="checkbox" id="tour-type-2"> Wildlife<br>
+                                        <input type="checkbox" id="tour-type-3"> Cultural<br>
+                                        <input type="checkbox" id="tour-type-4"> Ecotourism<br>
+                                        <input type="checkbox" id="tour-type-5"> Sun and Beaches<br>
+                                    </div>
+                                </div>
+                                <button class="apply-button">Apply Filter</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="tour__list row mb-3">
@@ -309,3 +346,43 @@
     </section>
     @include('layouts.footer')
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $('#filter-btn').on('click', function() {
+                $('#filter-dropdown').toggle();
+            });
+
+            $(document).on('click', function(event) {
+                if (!$(event.target).closest('#filter-btn, #filter-dropdown').length) {
+                    $('#filter-dropdown').hide();
+                }
+            });
+
+            $('#clear-btn').on('click', function() {
+                $('input[type="checkbox"]').prop('checked', false);
+                $('#budget-range').val(150);
+                updateLabelPosition();
+            });
+
+            const $range = $('#budget-range');
+            const $rangeValue = $('#rangeValue');
+
+            function updateLabelPosition() {
+                const rangeWidth = $range.width();
+                const min = parseInt($range.attr('min'));
+                const max = parseInt($range.attr('max'));
+                const val = parseInt($range.val());
+
+                const percentage = ((val - min) / (max - min)) * 100;
+
+                $rangeValue.text(`$${val}`);
+                $rangeValue.css('left', `calc(${percentage}% - ${$rangeValue.width() / 2}px)`);
+            }
+
+            updateLabelPosition();
+            $range.on('input', updateLabelPosition);
+        });
+    </script>
+@endpush

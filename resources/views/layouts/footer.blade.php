@@ -6,25 +6,25 @@
                     <img class="logo" src="{{ asset('assets/logo-white.png') }}" alt="logo">
                 </div>
                 <div class="d-block">
-                    <i class="fa-brands fa-facebook me-3"></i>
-                    <i class="fa-brands fa-instagram me-3"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                    <a href="#"><i class="fa-brands fa-facebook me-3"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram me-3"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
             <div class="col-sm-7 mt-5 mb-3">
                 <div class="row d-flex">
                     <div class="col-sm-4">
-                        <a class="d-block mb-3">Home</a>
-                        <a class="d-block mb-3">About</a>
-                        <a class="d-block mb-3">Tours</a>
-                        <a class="d-block mb-3">Hotels</a>
-                        <a class="d-block mb-3">Contact</a>
+                        <a class="d-block mb-3" href="{{ url('/') }}">Home</a>
+                        <a class="d-block mb-3" href="{{ route('about') }}">About</a>
+                        <a class="d-block mb-3" href="{{ route('list-tour') }}">Tours</a>
+                        <a class="d-block mb-3" href="#">Hotels</a>
+                        <a class="d-block mb-3" href="#">Contact</a>
                     </div>
                     <div class="col-sm-4">
-                        <a class="d-block mb-3">Partner with us</a>
-                        <a class="d-block mb-3">Terms & Conditions</a>
-                        <a class="d-block mb-3">Privacy Policy</a>
-                        <a class="d-block mb-3">Guest Policy</a>
+                        <a class="d-block mb-3" href="#">Partner with us</a>
+                        <a class="d-block mb-3" href="#">Terms & Conditions</a>
+                        <a class="d-block mb-3" href="#">Privacy Policy</a>
+                        <a class="d-block mb-3" href="#">Guest Policy</a>
                     </div>
                     <div class="col-sm-4">
                         <p class="d-block mb-3"><i class="fa-solid fa-location-dot me-3"></i> Lilama 10 Tower, 56 To
