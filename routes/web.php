@@ -42,3 +42,7 @@ Route::get('/change-password', function () {
 Route::get('/list-tour', function () {
     return view('list-tour');
 })->name('list-tour');
+
+Route::get('/tour-details', function () {
+    return view('tour-details');
+})->name('tour-details');

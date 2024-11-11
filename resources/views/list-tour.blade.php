@@ -357,41 +357,6 @@
 
 @push('scripts')
     <script>
-        // $(document).ready(function() {
-        //     $('#filter-btn').on('click', function() {
-        //         $('#filter-dropdown').toggle();
-        //     });
-
-        //     $(document).on('click', function(event) {
-        //         if (!$(event.target).closest('#filter-btn, #filter-dropdown').length) {
-        //             $('#filter-dropdown').hide();
-        //         }
-        //     });
-
-        //     $('#clear-btn').on('click', function() {
-        //         $('input[type="checkbox"]').prop('checked', false);
-        //         $('#budget-range').val(0);
-        //         updateLabelPosition();
-        //     });
-
-        //     const $range = $('#budget-range');
-        //     const $rangeValue = $('#rangeValue');
-
-        //     function updateLabelPosition() {
-        //         const rangeWidth = $range.width();
-        //         const min = parseInt($range.attr('min'));
-        //         const max = parseInt($range.attr('max'));
-        //         const val = parseInt($range.val());
-
-        //         const percentage = ((val - min) / (max - min)) * 100;
-
-        //         $rangeValue.text(`$${val}`);
-        //         $rangeValue.css('left', `calc(${percentage}% - ${$rangeValue.width() / 2}px)`);
-        //     }
-
-        //     updateLabelPosition();
-        //     $range.on('input', updateLabelPosition);
-        // });
         $(document).ready(function() {
             $('#filter-btn').on('click', function() {
                 $('#filter-dropdown').toggle();

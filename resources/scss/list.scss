@@ -4,6 +4,7 @@
 }
 
 .filter-dropdown {
+    display: none;
     position: absolute;
     margin-top: 20px;
     right: 0;
@@ -42,6 +43,7 @@
 
 input[type="checkbox"] {
     margin-right: 8px;
+    margin-top: 10px;
 }
 
 .slider-wrapper {
