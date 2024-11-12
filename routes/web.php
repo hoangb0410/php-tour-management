@@ -46,3 +46,7 @@ Route::get('/list-tour', function () {
 Route::get('/tour-details', function () {
     return view('tour-details');
 })->name('tour-details');
+
+Route::get('/tour-booking', function () {
+    return view('tour-booking');
+})->name('tour-booking');

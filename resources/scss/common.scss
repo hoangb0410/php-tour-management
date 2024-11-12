@@ -20,6 +20,11 @@ a:hover {
     color: white;
 }
 
+.form-button:hover {
+    color: black;
+    background-color: var(--secondary-color);
+}
+
 .facebook-button {
     background-color:#4E86DB;
     color: white;
@@ -29,6 +34,11 @@ a:hover {
     background-color: white;
     color: var(--primary-color);
     border-color: var(--primary-color);
+}
+
+.back-button:hover{
+    color: black;
+    background-color: var(--secondary-color);
 }
 
 .selected-button {
