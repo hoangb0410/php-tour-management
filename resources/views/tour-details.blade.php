@@ -4,7 +4,7 @@
     <section class="path" style="margin-top: 160px; margin-bottom: 50px">
         <div class="container">
             <p>Home <span><i class="bi bi-dot" style="color: gray"></i></span> Tours <span><i class="bi bi-dot"
-                        style="color: gray"></i></span> Detail tour</p>
+                        style="color: gray"></i></span>Tour Details</p>
         </div>
     </section>
     <section class="main-content">
