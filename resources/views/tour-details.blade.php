@@ -28,6 +28,10 @@
                     <div class="details__item mb-3">
                         <div class="details__item__image">
                             <img id="main-image" src="{{ asset('assets/beach.png') }}" alt="beach">
+                            <button id="prev" class="arrow" style="left: 10px;"><i class="fa-solid fa-chevron-left"
+                                    style="color: white"></i></button>
+                            <button id="next" class="arrow" style="right: 10px;"><i class="fa-solid fa-chevron-right"
+                                    style="color: white"></i></button>
                         </div>
                     </div>
                     <div class="row review__list">
@@ -311,8 +315,8 @@
                                                 group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
                                         </button>
                                     </h2>
-                                    <div id="question2" class="accordion-collapse collapse"
-                                        aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                    <div id="question2" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                        data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
                                             <p class="answer">This activity will have a maximum of 17 travelers.</p>
                                         </div>
@@ -328,8 +332,8 @@
                                                 group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
                                         </button>
                                     </h2>
-                                    <div id="question3" class="accordion-collapse collapse"
-                                        aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                                    <div id="question3" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                        data-bs-parent="#faqAccordion">
                                         <div class="accordion-body">
                                             <p class="answer">This activity will have a maximum of 17 travelers.</p>
                                         </div>
@@ -339,10 +343,130 @@
                         </div>
 
                     </div>
-                    <div class="reviews content-section">
-                        <p>Reviews content goes here...</p>
+                    <div class="reviews content-section mt-5">
+                        <div class="card p-4 shadow-sm d-flex mb-5">
+                            <div class="row">
+                                <div
+                                    class="average-star col-4 text-center d-flex flex-column justify-content-center align-items-center">
+                                    <h1 class="mb-0">4/5</h1>
+                                    <div class="d-flex gap-1 justify-content-center">
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span style="color: gray">★</span>
+                                    </div>
+                                    <p class="content-font">Based on <strong>150 reviews</strong></p>
+                                </div>
+                                <div class="col-8">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="rating-label">5 <span class="text-gray">★</span></div>
+                                        <div class="progress progress-container flex-grow-1 mx-3">
+                                            <div class="progress-bar rating-bar" style="width: 28%"></div>
+                                        </div>
+                                        <div class="review-count">42 reviews</div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="rating-label">4 <span class="text-gray">★</span></div>
+                                        <div class="progress progress-container flex-grow-1 mx-3">
+                                            <div class="progress-bar rating-bar" style="width: 14%"></div>
+                                        </div>
+                                        <div class="review-count">21 reviews</div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="rating-label">3 <span class="text-gray">★</span></div>
+                                        <div class="progress progress-container flex-grow-1 mx-3">
+                                            <div class="progress-bar rating-bar" style="width: 24%"></div>
+                                        </div>
+                                        <div class="review-count">36 reviews</div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="rating-label">2 <span class="text-gray">★</span></div>
+                                        <div class="progress progress-container flex-grow-1 mx-3">
+                                            <div class="progress-bar rating-bar" style="width: 0%"></div>
+                                        </div>
+                                        <div class="review-count">0 reviews</div>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="rating-label">1 <span class="text-gray">★</span></div>
+                                        <div class="progress progress-container flex-grow-1 mx-3">
+                                            <div class="progress-bar rating-bar" style="width: 0%"></div>
+                                        </div>
+                                        <div class="review-count">0 reviews</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="comment mb-5">
+                            <div class="comment-body mt-5 mb-3">
+                                <i class="fa-solid fa-circle-user"></i>
+                                <textarea class="content-font" name="comment" id="comment" placeholder="Type anything"></textarea>
+                            </div>
+                            <div class="button-container d-flex justify-content-end">
+                                <button class="comment-button">Comment</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="comment-section mb-5">
+                            <div class="d-flex justify-items-center">
+                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar">
+                                <div class="rating-details">
+                                    <div class="d-flex gap-1 mb-1">
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                    </div>
+                                    <h4>The best experience ever!</h4>
+                                    <p class="content-font">Nevermind <span><i class="bi bi-dot"
+                                                style="color: gray"></i></span> Sep 2020</p>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <p class="content-font">It was excellent! The trip is long but the vans are comfortable and
+                                    have wi-fi. The
+                                    driver very friendly as well as Ahmed our guide to the dromedaries. The camp was
+                                    beautiful, comfortable beds, clean bathroom and delicious food! </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="comment-section mb-5">
+                            <div class="d-flex justify-items-center">
+                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar">
+                                <div class="rating-details">
+                                    <div class="d-flex gap-1 mb-1">
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                        <span class="rating-star">★</span>
+                                    </div>
+                                    <h4>The best experience ever!</h4>
+                                    <p class="content-font">Nevermind <span><i class="bi bi-dot"
+                                                style="color: gray"></i></span> Sep 2020</p>
+                                </div>
+                            </div>
+                            <div class="comment-content">
+                                <p class="content-font">It was excellent! The trip is long but the vans are comfortable and
+                                    have wi-fi. The
+                                    driver very friendly as well as Ahmed our guide to the dromedaries. The camp was
+                                    beautiful, comfortable beds, clean bathroom and delicious food! </p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="pagination mt-3">
+                            <div class="d-flex justify-content-between">
+                                <div class="page-buttons d-flex gap-2">
+                                    <button class="btn page-button mx-1">←</button>
+                                    <button class="btn page-button mx-1">1</button>
+                                    <button class="btn page-button mx-1">2</button>
+                                    <button class="btn page-button mx-1">→</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
             </section>
             <section class="related">
                 <h1 class="mb-5">Related tours</h1>
@@ -426,6 +550,7 @@
 
 @push('scripts')
     <script>
+        // click on the small image to preview
         $(document).ready(function() {
             $('.review__item__image').click(function() {
                 var newSrc = $(this).find('img').attr('src');
@@ -433,6 +558,7 @@
             });
         });
 
+        // select start date and end date
         flatpickr("#date-picker", {
             mode: "range",
             dateFormat: "d/m/Y",
@@ -445,9 +571,10 @@
             }
         });
 
+        // enter number of adults and children
         $(document).ready(function() {
             $('#update-button').click(function(event) {
-                event.preventDefault(); // Prevent the default form submission
+                event.preventDefault();
                 const adults = $('#num-adults').val();
                 const children = $('#num-children').val();
                 const inputField = $('#adults-children');
@@ -455,13 +582,35 @@
             });
         });
 
+        // select description / additional info / reviews
         $(document).ready(function() {
             $('.category-item').click(function() {
                 var targetClass = $(this).attr('id').replace('-category', '');
                 $('.content-section').hide();
                 $('.' + targetClass).show();
+                $('.category-item').removeClass('selected');
+                $(this).addClass('selected');
             });
-            $('#additional-info-category').click();
+            $('#description-category').click();
+        });
+
+        // preview image
+        const images = [
+            "{{ asset('assets/beach.png') }}",
+            "{{ asset('assets/picture-3.png') }}",
+            "{{ asset('assets/picture-7.png') }}",
+            "{{ asset('assets/picture-9.png') }}"
+        ];
+        let currentIndex = 0;
+
+        $('#prev').click(function() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            $('#main-image').attr('src', images[currentIndex]);
+        });
+
+        $('#next').click(function() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            $('#main-image').attr('src', images[currentIndex]);
         });
     </script>
 @endpush

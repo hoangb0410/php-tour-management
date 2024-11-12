@@ -334,14 +334,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="pagination row">
                     <div class="col-4">
                     </div>
                     <div class="col-8 d-flex justify-content-between">
                         <div class="d-flex align-items-center">
                             <p class="mb-0">Showing 1/2</p>
                         </div>
-                        <div class="page-buttons d-flex">
+                        <div class="page-buttons d-flex gap-2">
                             <button class="btn page-button mx-1">←</button>
                             <button class="btn page-button mx-1">1</button>
                             <button class="btn page-button mx-1">2</button>
