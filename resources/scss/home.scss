@@ -2,7 +2,7 @@
     margin-bottom: 100px;
 }
 
-.destination__item, .culture__item, .tour__item, .review__item{
+.destination__item, .culture__item, .review__item{
     &__image {
         position: relative;
         height: 0;
@@ -40,9 +40,4 @@ button {
 .input-container input {
     padding: 10px 30px;
     width: 300px;
-}
-.input-container {
-    position: relative;
-    display: flex;
-    align-items: center;
 }

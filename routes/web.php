@@ -50,3 +50,7 @@ Route::get('/tour-details', function () {
 Route::get('/tour-booking', function () {
     return view('tour-booking');
 })->name('tour-booking');
+
+Route::get('/list-hotel', function () {
+    return view('list-hotel');
+})->name('list-hotel');

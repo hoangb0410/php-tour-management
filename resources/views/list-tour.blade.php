@@ -60,7 +60,7 @@
                                         </div>
                                     </div>
                                     <div class="filter-category">
-                                        <label>Duration</label>
+                                        <label class="mb-2">Duration</label>
                                         <div>
                                             <input type="checkbox" id="duration-1"> 0 - 3 days<br>
                                             <input type="checkbox" id="duration-2"> 3 - 5 days<br>
@@ -68,7 +68,7 @@
                                             <input type="checkbox" id="duration-4"> Over 1 week<br>
                                         </div>
                                     </div>
-                                    <label>Type of Tours</label>
+                                    <label class="mb-2">Type of Tours</label>
                                     <div>
                                         <input type="checkbox" id="tour-type-1"> City-Break<br>
                                         <input type="checkbox" id="tour-type-2"> Wildlife<br>
@@ -86,6 +86,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -97,6 +98,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -109,6 +111,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -122,6 +125,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -133,6 +137,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -145,6 +150,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -158,6 +164,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -169,6 +176,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -181,6 +189,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -194,6 +203,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -205,6 +215,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -217,6 +228,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -230,6 +242,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -241,6 +254,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -253,6 +267,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -266,6 +281,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -277,6 +293,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -289,6 +306,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -302,6 +320,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -313,6 +332,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -325,6 +345,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
