@@ -31,20 +31,12 @@
     align-items: flex-end;
 }
 
-.details__item {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-
 .details__item__image {
     width: 100%;
-    height: 545px; /* Default height */
-    min-height: 100px; /* Minimum height to ensure it doesn't get too small */
+    height: 545px;
+    min-height: 100px;
     overflow: hidden;
+    position: relative;
 }
 
 .details__item__image img {
@@ -52,6 +44,14 @@
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.bookmark-icon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    color: var(--primary-color);
 }
 
 // @media (max-width: 1200px) {
@@ -243,4 +243,81 @@ textarea {
     border-radius: 50%;
     object-fit: cover;
     margin: 0 20px 0 20px;
+}
+
+.room, .addon {
+    display: flex;
+    align-items: center;
+}
+
+.room-name, .addon-name {
+    font-weight: bold;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-control button {
+    background-color: #e0e0e0;
+    color: black;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.price {
+    color: var(--third-color);
+    font-weight: bold;
+    text-align: right;
+}
+
+.amenitiy-section ul {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.amenitiy-section li {
+    break-inside: avoid;
+}
+
+.rule-hour {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    width: 80%;
+}
+
+.maps-section {
+    img {
+        width: 100%;
+    }
+}
+
+.review-score {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 50px;
+    padding: 30px;
+}
+
+#hotel-review-btn {
+    width: 100%;
+}
+
+.rating {
+    color: var(--primary-color);
 }

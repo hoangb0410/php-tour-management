@@ -28,6 +28,7 @@
                     <div class="details__item mb-3">
                         <div class="details__item__image">
                             <img id="main-image" src="{{ asset('assets/beach.png') }}" alt="beach">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                             <button id="prev" class="arrow" style="left: 10px;"><i class="fa-solid fa-chevron-left"
                                     style="color: white"></i></button>
                             <button id="next" class="arrow" style="right: 10px;"><i class="fa-solid fa-chevron-right"
@@ -262,211 +263,213 @@
                             </div>
                         </div>
                         <div class="maps-section mb-5">
-                            <h4>Maps</h4>
-                        </div>
-                        <div class="panoramic-video-section">
-                            <h4>360° Panoramic Images and Videos</h4>
+                            <h4 class="mb-3">Maps</h4>
+                            <img src="{{ asset('assets/maps.png') }}" alt="">
                         </div>
                     </div>
-                    <div class="additional-info content-section">
-                        <ul class="content-font mb-5">
-                            <li>Confirmation will be received at time of booking</li>
-                            <li>Not recommended for travelers with back problems</li>
-                            <li>Not recommended for pregnant travelers</li>
-                            <li>Infant seats available</li>
-                            <li>Not wheelchair accessible</li>
-                            <li>Children must be accompanied by an adult</li>
-                            <li>Vegetarian option is available, please advise at time of booking if required</li>
-                            <li>Minimum numbers apply</li>
-                            <li>There is a possibility of cancellation after confirmation if the meteorological
-                                conditions do not allow it</li>
-                            <li>Stroller accessible</li>
-                            <li>Service animals allowed</li>
-                            <li>Near public transportation</li>
-                            <li>Most travelers can participate</li>
-                            <li>This tour/activity will have a maximum of 17 travelers</li>
-                        </ul>
-                        <div class="faq-section">
-                            <h4 class="mb-3">FAQs</h4>
-                            <div class="accordion" id="faqAccordion">
-                                <!-- Question 1 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#question1" aria-expanded="true" aria-controls="question1">
-                                            <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
-                                                group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="question1" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p class="answer">This activity will have a maximum of 17 travelers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Question 2 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#question2" aria-expanded="true" aria-controls="question2">
-                                            <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
-                                                group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="question2" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                        data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p class="answer">This activity will have a maximum of 17 travelers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Question 3 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingSix">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#question3" aria-expanded="true" aria-controls="question3">
-                                            <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
-                                                group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="question3" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                        data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p class="answer">This activity will have a maximum of 17 travelers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="panoramic-video-section">
+                        <h4>360° Panoramic Images and Videos</h4>
                     </div>
-                    <div class="reviews content-section mt-5">
-                        <div class="card p-4 shadow-sm d-flex mb-5">
-                            <div class="row">
-                                <div
-                                    class="average-star col-4 text-center d-flex flex-column justify-content-center align-items-center">
-                                    <h1 class="mb-0">4/5</h1>
-                                    <div class="d-flex gap-1 justify-content-center">
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span style="color: gray">★</span>
-                                    </div>
-                                    <p class="content-font">Based on <strong>150 reviews</strong></p>
-                                </div>
-                                <div class="col-8">
-                                    <div class="d-flex align-items-center mb-2">
-                                        <div class="rating-label">5 <span class="text-gray">★</span></div>
-                                        <div class="progress progress-container flex-grow-1 mx-3">
-                                            <div class="progress-bar rating-bar" style="width: 28%"></div>
-                                        </div>
-                                        <div class="review-count">42 reviews</div>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <div class="rating-label">4 <span class="text-gray">★</span></div>
-                                        <div class="progress progress-container flex-grow-1 mx-3">
-                                            <div class="progress-bar rating-bar" style="width: 14%"></div>
-                                        </div>
-                                        <div class="review-count">21 reviews</div>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <div class="rating-label">3 <span class="text-gray">★</span></div>
-                                        <div class="progress progress-container flex-grow-1 mx-3">
-                                            <div class="progress-bar rating-bar" style="width: 24%"></div>
-                                        </div>
-                                        <div class="review-count">36 reviews</div>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <div class="rating-label">2 <span class="text-gray">★</span></div>
-                                        <div class="progress progress-container flex-grow-1 mx-3">
-                                            <div class="progress-bar rating-bar" style="width: 0%"></div>
-                                        </div>
-                                        <div class="review-count">0 reviews</div>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <div class="rating-label">1 <span class="text-gray">★</span></div>
-                                        <div class="progress progress-container flex-grow-1 mx-3">
-                                            <div class="progress-bar rating-bar" style="width: 0%"></div>
-                                        </div>
-                                        <div class="review-count">0 reviews</div>
+                </div>
+                <div class="additional-info content-section">
+                    <ul class="content-font mb-5">
+                        <li>Confirmation will be received at time of booking</li>
+                        <li>Not recommended for travelers with back problems</li>
+                        <li>Not recommended for pregnant travelers</li>
+                        <li>Infant seats available</li>
+                        <li>Not wheelchair accessible</li>
+                        <li>Children must be accompanied by an adult</li>
+                        <li>Vegetarian option is available, please advise at time of booking if required</li>
+                        <li>Minimum numbers apply</li>
+                        <li>There is a possibility of cancellation after confirmation if the meteorological
+                            conditions do not allow it</li>
+                        <li>Stroller accessible</li>
+                        <li>Service animals allowed</li>
+                        <li>Near public transportation</li>
+                        <li>Most travelers can participate</li>
+                        <li>This tour/activity will have a maximum of 17 travelers</li>
+                    </ul>
+                    <div class="faq-section">
+                        <h4 class="mb-3">FAQs</h4>
+                        <div class="accordion" id="faqAccordion">
+                            <!-- Question 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#question1" aria-expanded="true" aria-controls="question1">
+                                        <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
+                                            group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
+                                    </button>
+                                </h2>
+                                <div id="question1" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="answer">This activity will have a maximum of 17 travelers.</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <hr>
-                        <div class="comment mb-5">
-                            <div class="comment-body mt-5 mb-3">
-                                <i class="fa-solid fa-circle-user"></i>
-                                <textarea class="content-font" name="comment" id="comment" placeholder="Type anything"></textarea>
-                            </div>
-                            <div class="button-container d-flex justify-content-end">
-                                <button class="comment-button">Comment</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="comment-section mb-5">
-                            <div class="d-flex justify-items-center">
-                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar">
-                                <div class="rating-details">
-                                    <div class="d-flex gap-1 mb-1">
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
+
+                            <!-- Question 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFive">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#question2" aria-expanded="true" aria-controls="question2">
+                                        <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
+                                            group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
+                                    </button>
+                                </h2>
+                                <div id="question2" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="answer">This activity will have a maximum of 17 travelers.</p>
                                     </div>
-                                    <h4>The best experience ever!</h4>
-                                    <p class="content-font">Nevermind <span><i class="bi bi-dot"
-                                                style="color: gray"></i></span> Sep 2020</p>
                                 </div>
                             </div>
-                            <div class="comment-content">
-                                <p class="content-font">It was excellent! The trip is long but the vans are comfortable and
-                                    have wi-fi. The
-                                    driver very friendly as well as Ahmed our guide to the dromedaries. The camp was
-                                    beautiful, comfortable beds, clean bathroom and delicious food! </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="comment-section mb-5">
-                            <div class="d-flex justify-items-center">
-                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar">
-                                <div class="rating-details">
-                                    <div class="d-flex gap-1 mb-1">
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
-                                        <span class="rating-star">★</span>
+
+                            <!-- Question 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingSix">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#question3" aria-expanded="true" aria-controls="question3">
+                                        <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
+                                            group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
+                                    </button>
+                                </h2>
+                                <div id="question3" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                                    data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="answer">This activity will have a maximum of 17 travelers.</p>
                                     </div>
-                                    <h4>The best experience ever!</h4>
-                                    <p class="content-font">Nevermind <span><i class="bi bi-dot"
-                                                style="color: gray"></i></span> Sep 2020</p>
-                                </div>
-                            </div>
-                            <div class="comment-content">
-                                <p class="content-font">It was excellent! The trip is long but the vans are comfortable and
-                                    have wi-fi. The
-                                    driver very friendly as well as Ahmed our guide to the dromedaries. The camp was
-                                    beautiful, comfortable beds, clean bathroom and delicious food! </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="pagination mt-3">
-                            <div class="d-flex justify-content-between">
-                                <div class="page-buttons d-flex gap-2">
-                                    <button class="btn page-button mx-1">←</button>
-                                    <button class="btn page-button mx-1">1</button>
-                                    <button class="btn page-button mx-1">2</button>
-                                    <button class="btn page-button mx-1">→</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                </div>
+                <div class="reviews content-section mt-5">
+                    <div class="card p-4 shadow-sm d-flex mb-5">
+                        <div class="row">
+                            <div
+                                class="average-star col-4 text-center d-flex flex-column justify-content-center align-items-center">
+                                <h1 class="mb-0">4/5</h1>
+                                <div class="d-flex gap-1 justify-content-center">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span style="color: gray">★</span>
+                                </div>
+                                <p class="content-font">Based on <strong>150 reviews</strong></p>
+                            </div>
+                            <div class="col-8">
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="rating-label">5 <span class="text-gray">★</span></div>
+                                    <div class="progress progress-container flex-grow-1 mx-3">
+                                        <div class="progress-bar rating-bar" style="width: 28%"></div>
+                                    </div>
+                                    <div class="review-count">42 reviews</div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="rating-label">4 <span class="text-gray">★</span></div>
+                                    <div class="progress progress-container flex-grow-1 mx-3">
+                                        <div class="progress-bar rating-bar" style="width: 14%"></div>
+                                    </div>
+                                    <div class="review-count">21 reviews</div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="rating-label">3 <span class="text-gray">★</span></div>
+                                    <div class="progress progress-container flex-grow-1 mx-3">
+                                        <div class="progress-bar rating-bar" style="width: 24%"></div>
+                                    </div>
+                                    <div class="review-count">36 reviews</div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="rating-label">2 <span class="text-gray">★</span></div>
+                                    <div class="progress progress-container flex-grow-1 mx-3">
+                                        <div class="progress-bar rating-bar" style="width: 0%"></div>
+                                    </div>
+                                    <div class="review-count">0 reviews</div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="rating-label">1 <span class="text-gray">★</span></div>
+                                    <div class="progress progress-container flex-grow-1 mx-3">
+                                        <div class="progress-bar rating-bar" style="width: 0%"></div>
+                                    </div>
+                                    <div class="review-count">0 reviews</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="comment mb-5">
+                        <div class="comment-body mt-5 mb-3">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <textarea class="content-font" name="comment" id="comment" placeholder="Type anything"></textarea>
+                        </div>
+                        <div class="button-container d-flex justify-content-end">
+                            <button class="comment-button">Comment</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="comment-section mb-5">
+                        <div class="d-flex justify-items-center">
+                            <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar">
+                            <div class="rating-details">
+                                <div class="d-flex gap-1 mb-1">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                </div>
+                                <h4>The best experience ever!</h4>
+                                <p class="content-font">Nevermind <span><i class="bi bi-dot"
+                                            style="color: gray"></i></span> Sep 2020</p>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p class="content-font">It was excellent! The trip is long but the vans are comfortable and
+                                have wi-fi. The
+                                driver very friendly as well as Ahmed our guide to the dromedaries. The camp was
+                                beautiful, comfortable beds, clean bathroom and delicious food! </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="comment-section mb-5">
+                        <div class="d-flex justify-items-center">
+                            <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar">
+                            <div class="rating-details">
+                                <div class="d-flex gap-1 mb-1">
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                    <span class="rating-star">★</span>
+                                </div>
+                                <h4>The best experience ever!</h4>
+                                <p class="content-font">Nevermind <span><i class="bi bi-dot"
+                                            style="color: gray"></i></span> Sep 2020</p>
+                            </div>
+                        </div>
+                        <div class="comment-content">
+                            <p class="content-font">It was excellent! The trip is long but the vans are comfortable and
+                                have wi-fi. The
+                                driver very friendly as well as Ahmed our guide to the dromedaries. The camp was
+                                beautiful, comfortable beds, clean bathroom and delicious food! </p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="pagination mt-3">
+                        <div class="d-flex justify-content-between">
+                            <div class="page-buttons d-flex gap-2">
+                                <button class="btn page-button mx-1">←</button>
+                                <button class="btn page-button mx-1">1</button>
+                                <button class="btn page-button mx-1">2</button>
+                                <button class="btn page-button mx-1">→</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="related">
                 <h1 class="mb-5">Related tours</h1>
@@ -474,6 +477,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -485,6 +489,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -497,6 +502,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -506,10 +512,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="tour__list row mb-5">
+                <div class="tour__list row mb-3">
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
@@ -521,6 +528,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
@@ -533,6 +541,7 @@
                     <div class="tour__item col-4">
                         <div class="tour__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
                         <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>

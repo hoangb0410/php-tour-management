@@ -134,6 +134,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Chic Urban Living</strong></p>
@@ -151,6 +158,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Spanish Farm - Villa 3</strong></p>
@@ -168,6 +182,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>The Ritz-Carlton, Pentagon City</strong></p>
@@ -187,6 +208,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Yours Truly DC</strong></p>
@@ -204,6 +232,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Spanish Farm - Villa 3</strong></p>
@@ -221,6 +256,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Yours Truly DC</strong></p>
@@ -240,6 +282,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Yours Truly DC</strong></p>
@@ -257,6 +306,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Spanish Farm - Villa 3
@@ -275,6 +331,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Yours Truly DC</strong></p>
@@ -294,6 +357,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Yours Truly DC</strong></p>
@@ -311,6 +381,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Spanish Farm - Villa 3
@@ -329,6 +406,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Yours Truly DC</strong></p>
@@ -348,6 +432,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-3.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Yours Truly DC</strong></p>
@@ -365,6 +456,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-4.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Spanish Farm - Villa 3
@@ -383,6 +481,13 @@
                         <div class="hotel__item__image">
                             <img src="{{ asset('assets/picture-5.png') }}" alt="">
                             <i class="fa-solid fa-bookmark bookmark-icon"></i>
+                            <div class="d-flex gap-1 justify-content-center rating-stars">
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                                <span class="rating-star">★</span>
+                            </div>
                         </div>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
                         <p><strong>Yours Truly DC</strong></p>

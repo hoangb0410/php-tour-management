@@ -23,6 +23,8 @@ Route::get('/about', function () {
 Route::get('/test', function () {
     return view('test');
 });
+
+// Auth
 Route::get('/login', function () {
     return view('login');
 })->name('login');
@@ -39,6 +41,7 @@ Route::get('/change-password', function () {
     return view('change-password');
 })->name('change-password');
 
+// Tour
 Route::get('/list-tour', function () {
     return view('list-tour');
 })->name('list-tour');
@@ -51,6 +54,11 @@ Route::get('/tour-booking', function () {
     return view('tour-booking');
 })->name('tour-booking');
 
+// Hotel
 Route::get('/list-hotel', function () {
     return view('list-hotel');
 })->name('list-hotel');
+
+Route::get('/hotel-details', function () {
+    return view('hotel-details');
+})->name('hotel-details');
