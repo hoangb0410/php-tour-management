@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    @include('layouts.header')
+    @include('layouts.light-header')
     <section class="banner" style="height: 300px;">
         <div class="container">
             <div class="d-flex" style="width: 100%; justify-content: center;">
