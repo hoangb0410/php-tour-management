@@ -22,8 +22,17 @@
 
 .nav-link.light {
     color: white;
+    transition: color 0.3s ease;
 }
 
-.nav-link:hover, .nav-link.active, .nav-link.light:hover, .nav-link.light.active {
+.nav-link:hover, .nav-link.light:hover {
     color: var(--primary-color);
+}
+
+.navbar.scrolled .nav-link.light:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar.scrolled .nav-link.light {
+    color: black;
 }
