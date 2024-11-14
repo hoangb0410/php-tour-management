@@ -30,13 +30,13 @@ a:hover {
     color: white;
 }
 
-.back-button {
+.outline-button {
     background-color: white;
     color: var(--primary-color);
     border-color: var(--primary-color);
 }
 
-.back-button:hover{
+.outline-button:hover{
     color: black;
     background-color: var(--secondary-color);
 }
@@ -49,6 +49,10 @@ a:hover {
 .unselected-button {
     background-color: rgb(201, 199, 199);
     color: black;
+}
+
+.selected-button i {
+    color: white;
 }
 
 .password-field {

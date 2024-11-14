@@ -1,19 +1,19 @@
 @extends('layouts.master')
 @section('content')
     @include('layouts.header')
-    <section class="banner" style="height: 666px;">
+    <section class="banner" style="height: 666px; background-image: url('{{ asset('assets/banner-2.png') }}');">
         <div class="container">
             <div class="row">
                 <div class="col-7">
                     <div class="slogan">
-                        <p>Search hundreds of tours and more</p>
-                        <h1>Attractive tour <br>and interesting<br> experiences</h1>
+                        <p>Find deals on hotels, homes, and much more...</p>
+                        <h1>From cozy country<br> homes to funky<br> city apartments</h1>
                     </div>
                 </div>
                 <div class="col-5">
                     <div class="tour-hotel-search">
                         <div class="tour-hotel-search-form" id="tour-form">
-                            @include('forms.tour-search-form')
+                            @include('forms.hotel-search-form')
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
     </section>
     <section class="path">
         <div class="container">
-            <p><a href="{{ route('home') }}">Home</a> <span><i class="bi bi-dot" style="color: gray"></i></span> Tours</p>
+            <p><a href="{{ route('home') }}">Home</a> <span><i class="bi bi-dot" style="color: gray"></i></span> Hotels</p>
         </div>
     </section>
     <section class="main-content">
@@ -31,9 +31,22 @@
             <div class="content" style="margin-top: 100px">
                 <div class="row mb-5">
                     <div class="col-4">
-                        <h1>Attractive tour and interesting experiences</h1>
+                        <h1>Hotels</h1>
                     </div>
                     <div class="col-8 " style="display: flex; justify-content: flex-end; align-items: flex-end;">
+                        <div class="sort-by d-flex align-items-center me-5">
+                            <span class="me-2" style="color: var(--primary-color)">SORT BY:</span>
+                            <div class="dropdown">
+                                <button class="btn text-decoration-none dropdown-toggle" type="button" id="sortDropdown"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Price
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="sortDropdown">
+                                    <li><a class="dropdown-item" href="#">Price</a></li>
+                                    <li><a class="dropdown-item" href="#">Rating</a></li>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="filter-container">
                             <button id="filter-btn" class="filter-button">Filter</button>
                             <div id="filter-dropdown" class="filter-dropdown">
@@ -59,21 +72,56 @@
                                         </div>
                                     </div>
                                     <div class="filter-category">
-                                        <label class="mb-2">Duration</label>
+                                        <label class="mb-2">Hotel star</label>
                                         <div>
-                                            <input type="checkbox" id="duration-1"> 0 - 3 days<br>
-                                            <input type="checkbox" id="duration-2"> 3 - 5 days<br>
-                                            <input type="checkbox" id="duration-3"> 5 - 7 days<br>
-                                            <input type="checkbox" id="duration-4"> Over 1 week<br>
+                                            <div class="d-flex align-items-center gap-1 mb-1">
+                                                <input type="checkbox" id="five-star">
+                                                <div class="d-flex flex-row gap-1">
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1 mb-1">
+                                                <input type="checkbox" id="four-star">
+                                                <div class="d-flex flex-row gap-1">
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1 mb-1">
+                                                <input type="checkbox" id="three-star">
+                                                <div class="d-flex flex-row gap-1">
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1 mb-1">
+                                                <input type="checkbox" id="two-star">
+                                                <div class="d-flex flex-row gap-1">
+                                                    <span class="rating-star">★</span>
+                                                    <span class="rating-star">★</span>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-1 mb-1">
+                                                <input type="checkbox" id="one-star">
+                                                <div class="d-flex flex-row gap-1">
+                                                    <span class="rating-star">★</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <label class="mb-2">Type of Tours</label>
+                                    <label class="mb-2">Review Score</label>
                                     <div>
-                                        <input type="checkbox" id="tour-type-1"> City-Break<br>
-                                        <input type="checkbox" id="tour-type-2"> Wildlife<br>
-                                        <input type="checkbox" id="tour-type-3"> Cultural<br>
-                                        <input type="checkbox" id="tour-type-4"> Ecotourism<br>
-                                        <input type="checkbox" id="tour-type-5"> Sun and Beaches<br>
+                                        <input type="checkbox" id="score-1"> Wonderful: 9.5+<br>
+                                        <input type="checkbox" id="score-2"> Very Good: 9+<br>
+                                        <input type="checkbox" id="score-3"> Good: 8+<br>
+                                        <input type="checkbox" id="score-4"> Pleasant: 7+<br>
                                     </div>
                                 </div>
                                 <button class="apply-button">Apply Filter</button>
@@ -81,9 +129,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="tour__list row mb-3">
-                    @for ($i = 0; $i < 21; $i++)
-                        @include('components.tour')
+                <div class="hotel__list row mb-5">
+                    @for ($i = 0; $i < 15; $i++)
+                        @include('components.hotel')
                     @endfor
                 </div>
                 <div class="pagination row">
@@ -205,8 +253,8 @@
             });
         });
 
-        function openTourDetails() {
-            $(location).attr('href', 'tour-details');
+        function openHotelDetails() {
+            $(location).attr('href', 'hotel-details');
         }
     </script>
 @endpush

@@ -12,7 +12,7 @@
                 </div>
                 <button type="submit" class="btn form-button w-100 p-3">Send Request</button>
             </form>
-            <a href="/login" class="btn back-button w-100 p-3">Back to sign in</a>
+            <a href="/login" class="btn outline-button w-100 p-3">Back to sign in</a>
         </div>
         <div class="col-1"></div>
         <div class="col-7 auth-image">

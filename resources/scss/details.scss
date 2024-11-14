@@ -22,16 +22,7 @@
     margin: 0;
 }
 
-.details__item {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
-
-.details__item {
+.details__item, .details__room__item {
     position: relative;
     width: 100%;
     height: auto;
@@ -42,9 +33,10 @@
 
 .details__item__image {
     width: 100%;
-    height: 545px; /* Default height */
-    min-height: 100px; /* Minimum height to ensure it doesn't get too small */
+    height: 545px;
+    min-height: 100px;
     overflow: hidden;
+    position: relative;
 }
 
 .details__item__image img {
@@ -52,6 +44,14 @@
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.bookmark-icon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 30px;
+    color: var(--primary-color);
 }
 
 // @media (max-width: 1200px) {
@@ -86,17 +86,18 @@
     font-size: 18px;
 }
 
-.content-font.check {
+
+.content-font.check, .room-content-font.check {
     list-style: none;
     padding: 0;
 }
 
-.content-font.check li {
+.content-font.check li, .room-content-font.check li {
     position: relative;
     padding-left: 25px;
 }
 
-.content-font.check li::before {
+.content-font.check li::before, .room-content-font.check li::before {
     content: "\f00c";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -243,4 +244,165 @@ textarea {
     border-radius: 50%;
     object-fit: cover;
     margin: 0 20px 0 20px;
+}
+
+.room, .addon {
+    display: flex;
+    align-items: center;
+}
+
+.room-name, .addon-name {
+    font-weight: bold;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-control button {
+    background-color: #e0e0e0;
+    color: black;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.price {
+    color: var(--third-color);
+    font-weight: bold;
+    text-align: right;
+}
+
+.amenitiy-section ul, .room-facilities ul {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.amenitiy-section li, .room-facilities li {
+    break-inside: avoid;
+}
+
+.rule-hour {
+    padding: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    width: 80%;
+}
+
+.maps-section {
+    img {
+        width: 100%;
+    }
+}
+
+.review-score {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 50px;
+    padding: 30px;
+}
+
+#hotel-review-btn {
+    width: 100%;
+}
+
+.rating {
+    color: var(--primary-color);
+}
+
+.room__item {
+    &__image {
+        position: relative;
+        img {
+            max-width: 170px;
+            width: 170px;
+            max-height: 170px;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .image-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 15px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            padding: 5px;
+        }
+    }
+
+    .card-body {
+        padding: 10px 30px 10px 30px;
+        .card-title {
+            margin-bottom: 10px;
+        }
+
+        .content-font {
+            i {
+                color: rgb(82, 81, 81);
+            }
+        }
+    }
+
+    .room-facilities {
+        font-size: 15px;
+        color: gray;
+        span {
+            color: var(--third-color);
+        }
+    }
+}
+
+.select-btn {
+    width: 40%;
+}
+
+.room-main-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.details__room__item__image {
+    width: 100%;
+    height: 400px;
+    min-height: 100px;
+    overflow: hidden;
+    position: relative;
+}
+
+.room-details-information {
+    font-size: 15px;
+    i {
+        color: gray;
+    }
+    span {
+        color: var(--third-color);
+    }
+}
+
+.room-content-font {
+    color: rgb(82, 81, 81);
+    font-size: 15px;
+}
+
+.out-of-room-button {
+    background-color: #223143;
+    color: white;
 }

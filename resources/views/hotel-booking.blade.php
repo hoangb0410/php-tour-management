@@ -112,7 +112,7 @@
                 <div class="col-1"></div>
                 <div class="col-4">
                     <form class="tour-booking-form mt-3">
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
+                        <p><strong>TownePlace Suites Gaithersburg by Marriott</strong></p>
                         <p><i class="fa-solid fa-location-dot me-2"></i>Vungtau City, Baria-Vungtau</p>
                         <div class="row mb-3">
                             <div class="col-6">
@@ -157,6 +157,18 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <p><span style="color: var(--primary-color)">1 x </span>Standard Room</p>
+                            <p>$120.00</p>
+                        </div>
+                        <p style="color: gray">Add-ons:</p>
+                        <div class="d-flex justify-content-between mb-2">
+                            <p>Breakfast</p>
+                            <p>$20.00</p>
+                        </div>
+                        <div>
+
                         </div>
                         <div class="discount d-flex gap-2">
                             <input class="form-control p-3" type="text" id="promo-code" placeholder="Promo Code">

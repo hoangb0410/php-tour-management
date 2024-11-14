@@ -3,13 +3,14 @@
     @include('layouts.header')
     <section class="path" style="margin-top: 160px; margin-bottom: 50px">
         <div class="container">
-            <p>Home <span><i class="bi bi-dot" style="color: gray"></i></span> Tours <span><i class="bi bi-dot"
-                        style="color: gray"></i></span> Detail tour</p>
+            <p><a href="{{ route('home') }}">Home</a> <span><i class="bi bi-dot" style="color: gray"></i></span><a
+                    href="{{ route('list-tour') }}"> Tours </a><span><i class="bi bi-dot" style="color: gray"></i></span>Tour
+                Details</p>
         </div>
     </section>
     <section class="main-content">
         <div class="container">
-            <section class="content-header mb-5">
+            <div class="content-header mb-5">
                 <div class="row mb-3">
                     <div class="col-8">
                         <h1>Discover interesting things in the romantic coastal city of Vungtau</h1>
@@ -22,12 +23,13 @@
                     </div>
                     <p>128 reviews</p>
                 </div>
-            </section>
-            <section class="content-details row mb-5">
+            </div>
+            <div class="content-details row mb-5">
                 <div class="col-7">
                     <div class="details__item mb-3">
                         <div class="details__item__image">
                             <img id="main-image" src="{{ asset('assets/beach.png') }}" alt="beach">
+                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
                             <button id="prev" class="arrow" style="left: 10px;"><i class="fa-solid fa-chevron-left"
                                     style="color: white"></i></button>
                             <button id="next" class="arrow" style="right: 10px;"><i class="fa-solid fa-chevron-right"
@@ -110,11 +112,11 @@
                             <p>Total</p>
                             <p><strong>$450.00</strong></p>
                         </div>
-                        <button type="submit" class="btn form-button w-100 p-3">Book now</button>
+                        <button type="submit" class="btn form-button w-100 p-3" id="book-now-button">Book now</button>
                     </form>
                 </div>
-            </section>
-            <section class="information row mb-5">
+            </div>
+            <div class="information row mb-5">
                 <div class="category col-7">
                     <div class="d-flex justify-content-between">
                         <p id="description-category" class="category-item">Descriptions</p>
@@ -262,7 +264,8 @@
                             </div>
                         </div>
                         <div class="maps-section mb-5">
-                            <h4>Maps</h4>
+                            <h4 class="mb-3">Maps</h4>
+                            <img src="{{ asset('assets/maps.png') }}" alt="">
                         </div>
                         <div class="panoramic-video-section">
                             <h4>360° Panoramic Images and Videos</h4>
@@ -467,82 +470,16 @@
                             </div>
                         </div>
                     </div>
-            </section>
-            <section class="related">
+                </div>
+            </div>
+            <div class="related">
                 <h1 class="mb-5">Related tours</h1>
                 <div class="tour__list row mb-3">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
+                    @for ($i = 0; $i < 6; $i++)
+                        @include('components.tour')
+                    @endfor
                 </div>
-                <div class="tour__list row mb-5">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
     </section>
     @include('layouts.footer')
@@ -611,6 +548,17 @@
         $('#next').click(function() {
             currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
             $('#main-image').attr('src', images[currentIndex]);
+        });
+
+        function openTourDetails() {
+            $(location).attr('href', 'tour-details');
+        }
+
+        $(document).ready(function() {
+            $('#book-now-button').on('click', function(e) {
+                e.preventDefault();
+                $(location).attr('href', '/tour-booking');
+            });
         });
     </script>
 @endpush
