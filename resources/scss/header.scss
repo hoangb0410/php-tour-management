@@ -20,6 +20,10 @@
     box-shadow: 0 2px 2px -2px gray;
 }
 
+.nav-link.light {
+    color: white;
+}
+
 .nav-link:hover, .nav-link.active, .nav-link.light:hover, .nav-link.light.active {
     color: var(--primary-color);
 }

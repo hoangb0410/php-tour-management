@@ -35,12 +35,12 @@
 </header>
 
 <script>
-    document.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
+    $(document).on('scroll', function() {
+        const $navbar = $('.navbar');
+        if ($(window).scrollTop() > 50) {
+            $navbar.addClass('scrolled');
         } else {
-            navbar.classList.remove('scrolled');
+            $navbar.removeClass('scrolled');
         }
     });
 </script>

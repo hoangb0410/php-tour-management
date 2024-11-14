@@ -35,19 +35,19 @@
 </header>
 
 <script>
-    document.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        const logo = document.querySelector('.navbar-brand .logo');
-        const navLinks = document.querySelectorAll('.nav-link');
+    $(document).on('scroll', function() {
+        const $navbar = $('.navbar');
+        const $logo = $('.navbar-brand .logo');
+        const $navLinks = $('.nav-link');
 
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-            logo.src = "{{ asset('assets/logo-black.png') }}";
-            navLinks.forEach(link => link.style.color = 'black');
+        if ($(window).scrollTop() > 50) {
+            $navbar.addClass('scrolled');
+            $logo.attr('src', "{{ asset('assets/logo-black.png') }}");
+            $navLinks.css('color', 'black');
         } else {
-            navbar.classList.remove('scrolled');
-            logo.src = "{{ asset('assets/logo-white.png') }}";
-            navLinks.forEach(link => link.style.color = 'white');
+            $navbar.removeClass('scrolled');
+            $logo.attr('src', "{{ asset('assets/logo-white.png') }}");
+            $navLinks.css('color', 'white');
         }
     });
 </script>
