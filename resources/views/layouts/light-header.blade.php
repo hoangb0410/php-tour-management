@@ -38,16 +38,13 @@
     $(document).on('scroll', function() {
         const $navbar = $('.navbar');
         const $logo = $('.navbar-brand .logo');
-        const $navLinks = $('.nav-link');
 
         if ($(window).scrollTop() > 50) {
             $navbar.addClass('scrolled');
             $logo.attr('src', "{{ asset('assets/logo-black.png') }}");
-            $navLinks.css('color', 'black');
         } else {
             $navbar.removeClass('scrolled');
             $logo.attr('src', "{{ asset('assets/logo-white.png') }}");
-            $navLinks.css('color', 'white');
         }
     });
 </script>
