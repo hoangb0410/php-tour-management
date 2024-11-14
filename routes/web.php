@@ -66,3 +66,15 @@ Route::get('/hotel-details', function () {
 Route::get('/hotel-booking', function () {
     return view('hotel-booking');
 })->name('hotel-booking');
+
+Route::get('/privacy-policy', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
+
+Route::get('/thank', function () {
+    return view('thank');
+})->name('thank');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');

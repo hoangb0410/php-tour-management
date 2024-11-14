@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    @include('layouts.header')
+    @include('layouts.light-header')
     <section class="banner" style="height: 666px;">
         <div class="container">
             <div class="row">

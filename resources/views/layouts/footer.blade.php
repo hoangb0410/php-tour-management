@@ -17,13 +17,13 @@
                         <a class="d-block mb-3" href="{{ url('/') }}">Home</a>
                         <a class="d-block mb-3" href="{{ route('about') }}">About</a>
                         <a class="d-block mb-3" href="{{ route('list-tour') }}">Tours</a>
-                        <a class="d-block mb-3" href="#">Hotels</a>
-                        <a class="d-block mb-3" href="#">Contact</a>
+                        <a class="d-block mb-3" href="{{ route('list-hotel') }}">Hotels</a>
+                        <a class="d-block mb-3" href="{{ route('contact') }}">Contact</a>
                     </div>
                     <div class="col-sm-4">
                         <a class="d-block mb-3" href="#">Partner with us</a>
                         <a class="d-block mb-3" href="#">Terms & Conditions</a>
-                        <a class="d-block mb-3" href="#">Privacy Policy</a>
+                        <a class="d-block mb-3" href="{{ route('privacy-policy') }}">Privacy Policy</a>
                         <a class="d-block mb-3" href="#">Guest Policy</a>
                     </div>
                     <div class="col-sm-4">
