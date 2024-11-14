@@ -3,13 +3,14 @@
     @include('layouts.header')
     <section class="path" style="margin-top: 160px; margin-bottom: 50px">
         <div class="container">
-            <p>Home <span><i class="bi bi-dot" style="color: gray"></i></span> Hotels <span><i class="bi bi-dot"
-                        style="color: gray"></i></span> Hotel Details</p>
+            <p><a href="{{ route('home') }}">Home</a> <span><i class="bi bi-dot" style="color: gray"></i></span><a
+                    href="{{ route('list-hotel') }}"> Hotels </a><span><i class="bi bi-dot" style="color: gray"></i></span>
+                Hotel Details</p>
         </div>
     </section>
     <section class="main-content">
         <div class="container">
-            <section class="content-header mb-5">
+            <div class="content-header mb-5">
                 <div class="row mb-3">
                     <div class="col-8">
                         <h1>TownePlace Suites Gaithersburg by Marriott</h1>
@@ -29,8 +30,8 @@
                         <span class="rating-star">★</span>
                     </div>
                 </div>
-            </section>
-            <section class="content-details row mb-5">
+            </div>
+            <div class="content-details row mb-5">
                 <div class="col-7">
                     <div class="details__item mb-3">
                         <div class="details__item__image">
@@ -149,11 +150,11 @@
                             <p>Total</p>
                             <p><strong>$450.00</strong></p>
                         </div>
-                        <button type="submit" class="btn form-button w-100 p-3">Book now</button>
+                        <button type="submit" class="btn form-button w-100 p-3" id="book-now-button">Book now</button>
                     </form>
                 </div>
-            </section>
-            <section class="information row mb-5">
+            </div>
+            <div class="information row mb-5">
                 <div class="category col-7">
                     <div class="d-flex justify-content-between">
                         <p id="select-room-category" class="category-item">Select room</p>
@@ -162,77 +163,11 @@
                     </div>
                     <hr>
                     <div class="select-room content-section">
-                        <ul class="content-font mb-5">
-                            <li>Confirmation will be received at time of booking</li>
-                            <li>Not recommended for travelers with back problems</li>
-                            <li>Not recommended for pregnant travelers</li>
-                            <li>Infant seats available</li>
-                            <li>Not wheelchair accessible</li>
-                            <li>Children must be accompanied by an adult</li>
-                            <li>Vegetarian option is available, please advise at time of booking if required</li>
-                            <li>Minimum numbers apply</li>
-                            <li>There is a possibility of cancellation after confirmation if the meteorological
-                                conditions do not allow it</li>
-                            <li>Stroller accessible</li>
-                            <li>Service animals allowed</li>
-                            <li>Near public transportation</li>
-                            <li>Most travelers can participate</li>
-                            <li>This tour/activity will have a maximum of 17 travelers</li>
-                        </ul>
-                        <div class="faq-section">
-                            <h4 class="mb-3">FAQs</h4>
-                            <div class="accordion" id="faqAccordion">
-                                <!-- Question 1 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#question1" aria-expanded="true" aria-controls="question1">
-                                            <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
-                                                group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="question1" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p class="answer">This activity will have a maximum of 17 travelers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Question 2 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingFive">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#question2" aria-expanded="true" aria-controls="question2">
-                                            <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
-                                                group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="question2" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                                        data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p class="answer">This activity will have a maximum of 17 travelers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Question 3 -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingSix">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#question3" aria-expanded="true" aria-controls="question3">
-                                            <span><i class="fa-regular fa-circle-question me-3"></i>What is the maximum
-                                                group size during 2 Days 1 Night To Zagora Desert From Marrakech?</span>
-                                        </button>
-                                    </h2>
-                                    <div id="question3" class="accordion-collapse collapse" aria-labelledby="headingSix"
-                                        data-bs-parent="#faqAccordion">
-                                        <div class="accordion-body">
-                                            <p class="answer">This activity will have a maximum of 17 travelers.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="room__list">
+                            <h4 class="mb-3">Rooms</h4>
+                            @for ($i = 0; $i < 5; $i++)
+                                @include('components.room')
+                            @endfor
                         </div>
                     </div>
                     <div class="description content-section">
@@ -325,12 +260,13 @@
                             <div class="review-summery">
                                 <h1>Wonderful</h1>
                                 <p class="content-font">Based on <strong>150 reviews</strong></p>
-                                <button class="btn back-button" id="hotel-review-btn">Write a review</button>
+                                <button class="btn outline-button" id="hotel-review-btn">Write a review</button>
                             </div>
                         </div>
                         <div class="comment-section mb-5">
                             <div class="d-flex justify-items-center">
-                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar" style="margin-left: 0">
+                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar"
+                                    style="margin-left: 0">
                                 <div class="rating-details">
                                     <div class="rating mb-2">
                                         <span>Rating 9.5 <i class="bi bi-dot" style="color: gray"></i> Wonderful</span>
@@ -350,7 +286,8 @@
                         <hr>
                         <div class="comment-section mb-5">
                             <div class="d-flex justify-items-center">
-                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar" style="margin-left: 0">
+                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar"
+                                    style="margin-left: 0">
                                 <div class="rating-details">
                                     <div class="rating mb-2">
                                         <span>Rating 9.5 <i class="bi bi-dot" style="color: gray"></i> Wonderful</span>
@@ -370,7 +307,8 @@
                         <hr>
                         <div class="comment-section mb-5">
                             <div class="d-flex justify-items-center">
-                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar" style="margin-left: 0">
+                                <img src="{{ asset('assets/avatar.png') }}" alt="Avatar" class="avatar"
+                                    style="margin-left: 0">
                                 <div class="rating-details">
                                     <div class="rating mb-2">
                                         <span>Rating 9.5 <i class="bi bi-dot" style="color: gray"></i> Wonderful</span>
@@ -398,85 +336,16 @@
                             </div>
                         </div>
                     </div>
-            </section>
-            <section class="related">
+                </div>
+            </div>
+            <div class="related">
                 <h1 class="mb-5">Recommended for you</h1>
                 <div class="hotel__list row mb-5">
-                    <div class="hotel__item col-4">
-                        <div class="hotel__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                            <div class="d-flex gap-1 justify-content-center rating-stars">
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                            </div>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
-                        <p><strong>Yours Truly DC</strong></p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="review">
-                                <div class="star hotel-rating">
-                                    <p>Rating: 9.5</p>
-                                </div>
-                                <p>(150 reviews)</p>
-                            </div>
-                            <p class="mb-0">from <strong>$46.00</strong>/night</p>
-                        </div>
-                    </div>
-                    <div class="hotel__item col-4">
-                        <div class="hotel__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                            <div class="d-flex gap-1 justify-content-center rating-stars">
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                            </div>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
-                        <p><strong>Spanish Farm - Villa 3
-                            </strong></p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="review">
-                                <div class="star hotel-rating">
-                                    <p>Rating: 9.5</p>
-                                </div>
-                                <p>(150 reviews)</p>
-                            </div>
-                            <p class="mb-0">from <strong>$46.00</strong>/night</p>
-                        </div>
-                    </div>
-                    <div class="hotel__item col-4">
-                        <div class="hotel__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                            <div class="d-flex gap-1 justify-content-center rating-stars">
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                                <span class="rating-star">★</span>
-                            </div>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Phu Nhuan, Ho Chi Minh</p>
-                        <p><strong>Yours Truly DC</strong></p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="review">
-                                <div class="star hotel-rating">
-                                    <p>Rating: 9.5</p>
-                                </div>
-                                <p>(150 reviews)</p>
-                            </div>
-                            <p class="mb-0">from <strong>$46.00</strong>/night</p>
-                        </div>
-                    </div>
+                    @for ($i = 0; $i < 3; $i++)
+                        @include('components.hotel')
+                    @endfor
                 </div>
-            </section>
+            </div>
         </div>
     </section>
     @include('layouts.footer')
@@ -525,7 +394,7 @@
                 $('.category-item').removeClass('selected');
                 $(this).addClass('selected');
             });
-            $('#reviews-category').click();
+            $('#select-room-category').click();
         });
 
         // preview image
@@ -575,5 +444,16 @@
                 quantity.text(parseInt(quantity.text()) - 1);
             }
         }
+
+        function openHotelDetails() {
+            $(location).attr('href', 'hotel-details');
+        }
+
+        $(document).ready(function() {
+            $('#book-now-button').on('click', function(e) {
+                e.preventDefault();
+                $(location).attr('href', '/hotel-booking');
+            });
+        });
     </script>
 @endpush

@@ -40,7 +40,7 @@
     </section>
     <section class="main-content">
         <div class="container">
-            <section class="content row" style="margin-top: 100px">
+            <div class="content row" style="margin-top: 100px">
                 <div class="col-sm-6" style="position: relative;">
                     @include('components.intro')
                 </div>
@@ -55,8 +55,8 @@
                         reprehenderit cupiditate blanditiis nisi sint reiciendis? Cum nobis nemo amet. Mollitia aliquid
                         pariatur quae cum tenetur.</p>
                 </div>
-            </section>
-            <section class="content">
+            </div>
+            <div class="content">
                 <div class="row mb-5">
                     <div class="col-4">
                         <h1>Discover fascinating destinations</h1>
@@ -66,37 +66,12 @@
                     </div>
                 </div>
                 <div class="destination__list row">
-                    <div class="destination__item col-3">
-                        <div class="destination__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                        </div>
-                        <p><strong>Sapa, Laocai</strong></p>
-                        <p>24 experiences</p>
-                    </div>
-                    <div class="destination__item col-3">
-                        <div class="destination__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                        </div>
-                        <p><strong>Sapa, Laocai</strong></p>
-                        <p>24 experiences</p>
-                    </div>
-                    <div class="destination__item col-3">
-                        <div class="destination__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                        </div>
-                        <p><strong>Sapa, Laocai</strong></p>
-                        <p>24 experiences</p>
-                    </div>
-                    <div class="col-3">
-                        <div class="destination__item__image">
-                            <img src="{{ asset('assets/picture-6.png') }}" alt="">
-                        </div>
-                        <p><strong>Sapa, Laocai</strong></p>
-                        <p>24 experiences</p>
-                    </div>
+                    @for ($i = 0; $i < 4; $i++)
+                        @include('components.destination')
+                    @endfor
                 </div>
-            </section>
-            <section class="content">
+            </div>
+            <div class="content">
                 <div class="row mb-5">
                     <div class="col-4">
                         <h1>Attractive tour and interesting experiences</h1>
@@ -106,43 +81,12 @@
                     </div>
                 </div>
                 <div class="tour__list row">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
+                    @for ($i = 0; $i < 3; $i++)
+                        @include('components.tour')
+                    @endfor
                 </div>
-            </section>
-            <section class="content">
+            </div>
+            <div class="content">
                 <div class="row mb-5">
                     <div class="col-6">
                         <h1>Experience the traditional cultural beauties of Vietnam</h1>
@@ -152,45 +96,12 @@
                     </div>
                 </div>
                 <div class="culture__list row">
-                    <div class="culture__item col-4">
-                        <div class="culture__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Lang Vong, Hanoi</p>
-                        <p><strong>“ Com lang Vong “ - Traditional culinary features of the old Hanoi people
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>6 hours</p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="culture__item col-4">
-                        <div class="culture__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Lang Vong, Hanoi</p>
-                        <p><strong>“ Com lang Vong “ - Traditional culinary features of the old Hanoi people
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>6 hours</p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="culture__item col-4">
-                        <div class="culture__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Lang Vong, Hanoi</p>
-                        <p><strong>“ Com lang Vong “ - Traditional culinary features of the old Hanoi people
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>6 hours</p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
+                    @for ($i = 0; $i < 3; $i++)
+                        @include('components.tour')
+                    @endfor
                 </div>
-            </section>
-            <section class="content">
+            </div>
+            <div class="content">
                 <div class="d-flex justify-content-between align-items-center">
                     <h1>Leave us an email,<br>to get<span style="color: var(--primary-color);"> the latest deals</span>
                     </h1>
@@ -202,7 +113,7 @@
                         <button>Send</button>
                     </form>
                 </div>
-            </section>
+            </div>
         </div>
     </section>
     @include('layouts.footer')
@@ -225,5 +136,9 @@
                 $('#tour-form').hide();
             });
         });
+
+        function openTourDetails() {
+            $(location).attr('href', 'tour-details');
+        }
     </script>
 @endpush

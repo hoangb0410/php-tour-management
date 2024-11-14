@@ -169,3 +169,11 @@ input[type="range"]::-webkit-slider-thumb {
 .input-icon {
     color: var(--primary-color);
 }
+
+.card {
+    cursor: pointer;
+}
+
+.card-body {
+    padding: 0;
+}

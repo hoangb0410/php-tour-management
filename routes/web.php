@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/about', function () {
     return view('about');
@@ -62,3 +62,7 @@ Route::get('/list-hotel', function () {
 Route::get('/hotel-details', function () {
     return view('hotel-details');
 })->name('hotel-details');
+
+Route::get('/hotel-booking', function () {
+    return view('hotel-booking');
+})->name('hotel-booking');

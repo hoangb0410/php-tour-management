@@ -1,4 +1,4 @@
-<div class="fixed-header">
+<header class="fixed-header">
     <nav class="navbar navbar-expand-lg">
         <div class="container d-flex justify-content-between">
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -32,7 +32,7 @@
             </div>
         </div>
     </nav>
-</div>
+</header>
 
 <script>
     document.addEventListener('scroll', function() {

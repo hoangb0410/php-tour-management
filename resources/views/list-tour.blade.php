@@ -23,18 +23,17 @@
     </section>
     <section class="path">
         <div class="container">
-            <p>Home <span><i class="bi bi-dot" style="color: gray"></i></span> Tours</p>
+            <p><a href="{{ route('home') }}">Home</a> <span><i class="bi bi-dot" style="color: gray"></i></span> Tours</p>
         </div>
     </section>
     <section class="main-content">
         <div class="container">
-            <section class="content" style="margin-top: 100px">
+            <div class="content" style="margin-top: 100px">
                 <div class="row mb-5">
                     <div class="col-4">
                         <h1>Attractive tour and interesting experiences</h1>
                     </div>
                     <div class="col-8 " style="display: flex; justify-content: flex-end; align-items: flex-end;">
-                        {{-- <button class="">Filter</button> --}}
                         <div class="filter-container">
                             <button id="filter-btn" class="filter-button">Filter</button>
                             <div id="filter-dropdown" class="filter-dropdown">
@@ -83,277 +82,9 @@
                     </div>
                 </div>
                 <div class="tour__list row mb-3">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tour__list row mb-3">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tour__list row mb-3">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tour__list row mb-3">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tour__list row mb-3">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tour__list row mb-3">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tour__list row mb-3">
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-3.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-4.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover the most majestic Fansipan peak in Vietnam - the roof of Indochina
-                            </strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
-                    <div class="tour__item col-4">
-                        <div class="tour__item__image">
-                            <img src="{{ asset('assets/picture-5.png') }}" alt="">
-                            <i class="fa-solid fa-bookmark bookmark-icon"></i>
-                        </div>
-                        <p><i class="fa-solid fa-location-dot me-2"></i>Sapa, Laocai</p>
-                        <p><strong>Discover interesting things in the romantic coastal city of Vungtau</strong></p>
-                        <div class="d-flex justify-content-between">
-                            <p><i class="fa-regular fa-calendar me-2"></i>3 days - 2 nights </p>
-                            <p>from <strong>$146.00</strong></p>
-                        </div>
-                    </div>
+                    @for ($i = 0; $i < 21; $i++)
+                        @include('components.tour')
+                    @endfor
                 </div>
                 <div class="pagination row">
                     <div class="col-4">
@@ -370,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </section>
     @include('layouts.footer')
@@ -473,5 +204,9 @@
                 });
             });
         });
+
+        function openTourDetails() {
+            $(location).attr('href', 'tour-details');
+        }
     </script>
 @endpush
