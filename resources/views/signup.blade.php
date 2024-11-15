@@ -36,9 +36,6 @@
             </button>
             <p class="mt-3">Member already? <a href="/login" style="color: var(--primary-color);">Log in</a></p>
         </div>
-        <div class="col-1"></div>
-        <div class="col-7 auth-image">
-        </div>
     </div>
 @endsection
 

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('tour_id')->nullable();
             $table->unsignedBigInteger('hotel_id')->nullable();
             $table->unsignedBigInteger('room_id')->nullable();
+            $table->unsignedBigInteger('destination_id')->nullable();
             $table->string('url');
             $table->timestamps();
         });
