@@ -14,8 +14,5 @@
             </form>
             <a href="/login" class="btn outline-button w-100 p-3">Back to sign in</a>
         </div>
-        <div class="col-1"></div>
-        <div class="col-7 auth-image">
-        </div>
     </div>
 @endsection

@@ -30,9 +30,6 @@
             </button>
             <p class="mt-3">Don't have an account? <a href="/signup" style="color: var(--primary-color);">Sign up</a></p>
         </div>
-        <div class="col-1"></div>
-        <div class="col-7 auth-image">
-        </div>
     </div>
 @endsection
 

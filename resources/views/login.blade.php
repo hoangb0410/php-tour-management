@@ -30,8 +30,6 @@
                 <a href="/signup" style="color: var(--primary-color);">Sign up</a>
             </p>
         </div>
-        <div class="col-1"></div>
-        <div class="col-7 auth-image d-none d-md-block"></div>
     </div>
 @endsection
 
