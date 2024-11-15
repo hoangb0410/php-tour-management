@@ -33,12 +33,17 @@
     {{-- font --}}
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
+    {{-- toast --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillatoasts@1.4.0/vanillatoasts.css">
+    <script src="https://cdn.jsdelivr.net/npm/vanillatoasts@1.4.0/vanillatoasts.js"></script>
+
     <title>Tour</title>
 </head>
 
 <body>
     @yield('content')
     @stack('scripts')
+    <script src="{{ asset('js/custom.js') }}"></script>
 </body>
 
 </html>

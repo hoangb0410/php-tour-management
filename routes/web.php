@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,20 +27,23 @@ Route::get('/test', function () {
 
 // Auth
 Route::get('/login', function () {
-    return view('login');
+    return view('auth.login');
 })->name('login');
 
 Route::get('/signup', function () {
-    return view('signup');
+    return view('auth.signup');
 })->name('signup');
 
 Route::get('/forgot-password', function () {
-    return view('forgot-password');
+    return view('auth.forgot-password');
 })->name('forgot-password');
 
 Route::get('/change-password', function () {
-    return view('change-password');
+    return view('auth.change-password');
 })->name('change-password');
+
+// Auth backend
+Route::post('/register', [AuthController::class, 'register'])->name('register');
 
 // Tour
 Route::get('/list-tour', function () {
