@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LoginRequest;
 use App\Http\Requests\RegisterRequest;
-use App\Repositories\UserRepository;
 use App\Services\AuthService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -44,12 +43,12 @@ class AuthController extends Controller
                     'alert' => 'success',
                     'message' => __('client.login_success')
                 ], 200);
-            } else {
-                return response()->json([
-                    'alert' => 'error',
-                    'message' => __('auth.failed')
-                ], 401);
             }
+
+            return response()->json([
+                'alert' => 'error',
+                'message' => __('auth.failed')
+            ], 401);
         } catch (\Exception $e) {
             return response()->json([
                 'alert' => 'error',
