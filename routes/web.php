@@ -48,7 +48,7 @@ Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::post('/send-reset-link', [AuthController::class, 'sendResetLink'])->name('sendResetLink');
 Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('resetPassword');
-Route::get('/change-password', [AuthController::class, 'showResetForm']);
+Route::get('/change-password/{token}', [AuthController::class, 'showResetForm']);
 
 // Tours
 Route::get('/list-tour', function () {

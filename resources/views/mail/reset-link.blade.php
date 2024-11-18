@@ -68,7 +68,7 @@
     <div class="card">
         <div class="highlight">Reset Password</div>
         <div class="text">Click this button to reset your password:</div>
-        <a href="{{ url('change-password') }}" class="button">Reset Password</a>
+        <a href="{{ url('change-password', $token) }}" class="button">Reset Password</a>
     </div>
 </body>
 
