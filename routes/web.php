@@ -38,16 +38,19 @@ Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->name('forgot-password');
 
-Route::get('/change-password', function () {
-    return view('auth.change-password');
-})->name('change-password');
+// Route::get('/change-password', function () {
+//     return view('auth.change-password');
+// })->name('change-password');
 
 // Auth backend
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/send-reset-link', [AuthController::class, 'sendResetLink'])->name('sendResetLink');
+Route::post('/reset-password', [AuthController::class, 'resetPassword'])->name('resetPassword');
+Route::get('/change-password/{token}', [AuthController::class, 'showResetForm']);
 
-// Tour
+// Tours
 Route::get('/list-tour', function () {
     return view('list-tour');
 })->name('list-tour');

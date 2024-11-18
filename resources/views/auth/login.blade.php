@@ -23,7 +23,7 @@
                 <div class="d-flex justify-content-end mb-3">
                     <a href="/forgot-password" class="text-decoration-none">Forgot password?</a>
                 </div>
-                <button type="submit" class="btn form-button w-100 p-3" id="login-submit-form">Sign in</button>
+                <button type="submit" class="btn form-button w-100 p-3" id="login-submit-button">Sign in</button>
             </form>
             <button type="button" class="btn facebook-button w-100 p-3 mb-3">
                 <span><i class="fa-brands fa-facebook me-3"></i></span>Sign in with Facebook
@@ -39,23 +39,24 @@
 @push('scripts')
     <script src="{{ asset('js/toggle-password.js') }}"></script>
     <script>
-        $('#login-submit-form').on('click', function(e) {
-            e.preventDefault();
-            $('.p-error').text('');
-            $.ajax({
-                url: $('#login-form').attr('action'),
-                type: $('#login-form').attr('method'),
-                data: $('#login-form').serialize(),
-                success: function(response) {
-                    showVanillaToast(response.message, response.alert);
-                    setTimeout(function() {
-                        window.location.href = '/';
-                    }, 1000);
-                },
-                error: function(xhr, status, error) {
-                    formValidAjax(xhr);
-                }
+        $(document).ready(function() {
+            $('#login-submit-button').on('click', function(e) {
+                e.preventDefault();
+                $.ajax({
+                    url: $('#login-form').attr('action'),
+                    type: $('#login-form').attr('method'),
+                    data: $('#login-form').serialize(),
+                    success: function(response) {
+                        showVanillaToast(response.message, response.alert);
+                        setTimeout(function() {
+                            window.location.href = '/';
+                        }, 1000);
+                    },
+                    error: function(xhr, status, error) {
+                        formValidAjax(xhr);
+                    }
+                })
             })
-        })
+        });
     </script>
 @endpush

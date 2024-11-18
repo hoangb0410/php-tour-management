@@ -3,17 +3,25 @@
 namespace App\Services;
 
 use App\Helpers\Common;
+use App\Jobs\SendResetLinkEmail;
+use App\Jobs\SendResetLinkEmailJob;
+use App\Repositories\PasswordResetTokenRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class AuthService
 {
     protected $userRepository;
+    protected $passwordResetTokenRepository;
 
-    public function __construct(UserRepository $userRepository)
+    public function __construct(UserRepository $userRepository, PasswordResetTokenRepository $passwordResetTokenRepository)
     {
         $this->userRepository = $userRepository;
+        $this->passwordResetTokenRepository = $passwordResetTokenRepository;
     }
 
     public function register($request)
@@ -41,5 +49,31 @@ class AuthService
         } else {
             return false;
         }
+    }
+
+    public function sendResetLink($request)
+    {
+
+        $email = $request->email;
+
+        $token = Str::random(60);
+
+        $this->passwordResetTokenRepository->insert([
+            'email' => $email,
+            'token' => $token,
+            'created_at' => now()
+        ]);
+        SendResetLinkEmailJob::dispatch($email, $token);
+    }
+
+    public function resetPassword($request)
+    {
+        $passwordReset = $this->passwordResetTokenRepository->getByToken($request->token);
+
+        $user = $this->userRepository->getByEmail($passwordReset->email);
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        $this->passwordResetTokenRepository->delete($passwordReset->email);
     }
 }

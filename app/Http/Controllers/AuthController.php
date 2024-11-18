@@ -75,4 +75,48 @@ class AuthController extends Controller
             ], 500);
         }
     }
+
+    public function sendResetLink(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email'
+        ]);
+        try {
+            $this->authService->sendResetLink($request);
+            return response()->json([
+                'alert' => 'success',
+                'message' => __('auth.send_reset_success')
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'alert' => 'error',
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
+
+    public function showResetForm($token)
+    {
+        return view('auth.change-password', ['token' => $token]);
+    }
+
+    public function resetPassword(Request $request)
+    {
+        $request->validate([
+            'password' => 'required|confirmed|min:8',
+            'token' => 'required'
+        ]);
+        try {
+            $this->authService->resetPassword($request);
+            return response()->json([
+                'alert' => 'success',
+                'message' => __('auth.reset_password_success')
+            ], 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'alert' => 'error',
+                'message' => $e->getMessage()
+            ], 500);
+        }
+    }
 }
