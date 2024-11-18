@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('content')
-    @include('layouts.light-header')
+    @include('layouts.navbar', ['navbar_type' => 'light'])
+
     <section class="banner" style="height: 776px;">
         <div class="container">
             <div class="row">

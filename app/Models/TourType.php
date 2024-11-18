@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class TourType extends Model
 {
@@ -13,4 +14,9 @@ class TourType extends Model
         'name',
         'description',
     ];
+
+    public function tours(): HasMany
+    {
+        return $this->hasMany(Tour::class, 'type_id');
+    }
 }

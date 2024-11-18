@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    @include('layouts.header')
+    @include('layouts.navbar', ['navbar_type' => 'dark'])
     <div class="container">
         <section class="path" style="margin-top: 160px; margin-bottom: 50px">
             <p><a href="{{ route('home') }}">Home</a> <span><i class="bi bi-dot" style="color: gray"></i></span>Privacy Policy
