@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    @include('layouts.light-header')
+    @include('layouts.navbar', ['navbar_type' => 'light'])
     <section class="banner" style="height: 568px; background-image: url('{{ asset('assets/banner-3.png') }}');">
         <div class="container">
             <h1>Contact us</h1>
@@ -39,7 +39,7 @@
             </div>
         </div>
         <div class="maps">
-            <img class="w-100" src="{{asset('assets/contact-map.png')}}" alt="">
+            <img class="w-100" src="{{ asset('assets/contact-map.png') }}" alt="">
         </div>
     </section>
     @include('layouts.footer')

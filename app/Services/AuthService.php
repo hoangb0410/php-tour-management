@@ -4,7 +4,8 @@ namespace App\Services;
 
 use App\Helpers\Common;
 use App\Repositories\UserRepository;
-use Illuminate\Support\Facades\Hash;    
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthService
 {
@@ -26,5 +27,19 @@ class AuthService
 
         $data['password'] = Hash::make($data['password']);
         $this->userRepository->create($data);
+    }
+
+    public function signin($request)
+    {
+        $data = [
+            'email' => Common::clearXSS($request->email),
+            'password' => Common::clearXSS($request->password)
+        ];
+
+        if (Auth::attempt($data)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

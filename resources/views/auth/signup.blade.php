@@ -28,15 +28,15 @@
                         placeholder="Enter email">
                     <p class="p-error valid_error-email text-danger"></p>
                 </div>
-                <div class="form-group mb-3 password-field">
+                <div class="form-group mb password-field">
                     <label for="signup-password">Password</label>
                     <input type="password" class="form-control p-3 password" name="password" id="signup-password"
                         placeholder="Password">
                     <span class="toggle-password">
                         <i class="fa-solid fa-eye" id="toggle-icon"></i>
                     </span>
-                    <p class="p-error valid_error-password text-danger"></p>
                 </div>
+                <p class="p-error valid_error-password text-danger mb-3"></p>
                 <button type="submit" class="btn form-button w-100 p-3" id="signup-submit-form">Sign up</button>
             </form>
 
@@ -60,7 +60,10 @@
                 type: $('#signup-form').attr('method'),
                 data: $('#signup-form').serialize(),
                 success: function(response) {
-                    showVanillaToast(response.message, response.alert)
+                    showVanillaToast(response.message, response.alert);
+                    setTimeout(function() {
+                        window.location.href = '/login';
+                    }, 1000);
                 },
                 error: function(xhr, status, error) {
                     formValidAjax(xhr);

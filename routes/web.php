@@ -44,6 +44,8 @@ Route::get('/change-password', function () {
 
 // Auth backend
 Route::post('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Tour
 Route::get('/list-tour', function () {

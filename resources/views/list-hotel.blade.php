@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('content')
-    @include('layouts.light-header')
+    @include('layouts.navbar', ['navbar_type' => 'light'])
     <section class="banner" style="height: 666px; background-image: url('{{ asset('assets/banner-2.png') }}');">
         <div class="container">
             <div class="row">
