@@ -38,10 +38,6 @@ Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->name('forgot-password');
 
-// Route::get('/change-password', function () {
-//     return view('auth.change-password');
-// })->name('change-password');
-
 // Auth backend
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
