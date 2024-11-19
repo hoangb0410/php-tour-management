@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,10 +38,6 @@ Route::get('/signup', function () {
 Route::get('/forgot-password', function () {
     return view('auth.forgot-password');
 })->name('forgot-password');
-
-// Route::get('/change-password', function () {
-//     return view('auth.change-password');
-// })->name('change-password');
 
 // Auth backend
 Route::post('/register', [AuthController::class, 'register'])->name('register');
@@ -87,3 +84,18 @@ Route::get('/thank', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+// ADMIN
+
+
+
+Route::prefix('admin')->middleware('admin')->group(function () {
+    // User
+    Route::get('/', function () {
+        return view('admin.user.index');
+    });
+    Route::get('/list-user', [UserController::class, 'listUsers'])->name('user.list');
+    Route::get('{id}/view-edit-user', [UserController::class, 'viewEditUser'])->name('user.view-edit');
+    Route::post('/store-user', [UserController::class, 'storeUser'])->name('user.store');
+    Route::delete('{id}/delete-user', [UserController::class, 'deleteUser'])->name('user.delete');
+});

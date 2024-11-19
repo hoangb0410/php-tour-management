@@ -89,6 +89,7 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
-.toast {
-    z-index: 9999;
+#vanillatoasts-container {
+    z-index: 9999 !important;
 }
+  

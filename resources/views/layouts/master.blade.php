@@ -37,6 +37,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillatoasts@1.4.0/vanillatoasts.css">
     <script src="https://cdn.jsdelivr.net/npm/vanillatoasts@1.4.0/vanillatoasts.js"></script>
 
+    {{-- datatable --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
     <title>Tour</title>
 </head>
 
