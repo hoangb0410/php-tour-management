@@ -32,6 +32,14 @@ class UserRepository
         return $this->user->where('id', $id)->update($data);
     }
 
+    public function updateOrCreate($id, $data)
+    {
+        return $this->user->updateOrCreate(
+            ['id' => $id],
+            $data
+        );
+    }
+
     public function delete($id)
     {
         $this->user->where('id', $id)->delete();

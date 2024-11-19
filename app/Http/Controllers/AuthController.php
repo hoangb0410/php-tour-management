@@ -37,11 +37,13 @@ class AuthController extends Controller
     {
         try {
             $loginSuccessful = $this->authService->signin($request);
+            $user = Auth::user();
 
             if ($loginSuccessful) {
                 return response()->json([
                     'alert' => 'success',
-                    'message' => __('client.login_success')
+                    'message' => __('client.login_success'),
+                    'user' => $user
                 ], 200);
             }
 

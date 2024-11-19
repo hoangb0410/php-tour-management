@@ -48,9 +48,16 @@
                     data: $('#login-form').serialize(),
                     success: function(response) {
                         showVanillaToast(response.message, response.alert);
-                        setTimeout(function() {
-                            window.location.href = '/';
-                        }, 1000);
+                        console.log(response.user.is_admin);
+                        if (response.user.is_admin) {
+                            setTimeout(function() {
+                                window.location.href = '/admin';
+                            }, 1000);
+                        } else {
+                            setTimeout(function() {
+                                window.location.href = '/';
+                            }, 1000);
+                        }
                     },
                     error: function(xhr, status, error) {
                         formValidAjax(xhr);
