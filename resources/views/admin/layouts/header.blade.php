@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">NgaoDuVietnam</a>
+        <a class="navbar-brand" href="{{ url('/admin/user') }}">NgaoDuVietnam</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,13 +10,16 @@
                 @auth
                     @admin
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin">Users</a>
+                            <a class="nav-link" href="/admin/user">User</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Categories</a>
+                            <a class="nav-link" href="/admin/tour">Tour</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Books</a>
+                            <a class="nav-link" href="">Hotel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Room</a>
                         </li>
                     @endadmin
                 @endauth

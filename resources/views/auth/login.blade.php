@@ -51,7 +51,7 @@
                         console.log(response.user.is_admin);
                         if (response.user.is_admin) {
                             setTimeout(function() {
-                                window.location.href = '/admin';
+                                window.location.href = '/admin/user';
                             }, 1000);
                         } else {
                             setTimeout(function() {

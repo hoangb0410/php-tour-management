@@ -4,26 +4,25 @@ namespace App\Repositories;
 
 use App\Models\PasswordResetToken;
 
-class PasswordResetTokenRepository
+class PasswordResetTokenRepository extends BaseRepository
 {
-    protected $passwordResetToken;
     public function __construct(PasswordResetToken $passwordResetToken)
     {
-        $this->passwordResetToken = $passwordResetToken;
+        parent::__construct($passwordResetToken);
     }
 
     public function insert($data)
     {
-        return $this->passwordResetToken->insert($data);
+        return $this->model->insert($data);
     }
 
     public function getByToken($token)
     {
-        return $this->passwordResetToken->where('token', $token)->first();
+        return $this->model->where('token', $token)->first();
     }
 
     public function delete($email)
     {
-        $this->passwordResetToken->where('email', $email)->delete();
+        $this->model->where('email', $email)->delete();
     }
 }
