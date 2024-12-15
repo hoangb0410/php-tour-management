@@ -135,7 +135,7 @@
             })
 
             //Delete button event
-            $('body').on('click', '.delete-user-btn', function(e) {
+            $('body').on('click', '.delete-btn', function(e) {
                 e.preventDefault();
                 $.ajax({
                     url: $(this).data('url'),

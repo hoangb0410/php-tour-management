@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Helpers\Common;
 use App\Repositories\UserRepository;
+use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\Facades\DataTables;
 
 class UserService
@@ -48,8 +49,11 @@ class UserService
             'first_name' => Common::clearXss($request->first_name),
             'last_name' => Common::clearXss($request->last_name),
             'email' => Common::clearXss($request->email),
-            'password' => bcrypt($request->password)
         ];
+
+        if ($request->filled('password')) {
+            $data['password'] = Hash::make($request->password);
+        }
 
         $existingUser = $this->userRepository->getByEmail($data['email']);
         if ($existingUser && $existingUser->id != $request->id) {

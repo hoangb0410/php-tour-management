@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\TourController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
@@ -91,11 +92,25 @@ Route::get('/contact', function () {
 
 Route::prefix('admin')->middleware('admin')->group(function () {
     // User
-    Route::get('/', function () {
+    Route::get('/user', function () {
         return view('admin.user.index');
     });
     Route::get('/list-user', [UserController::class, 'listUsers'])->name('user.list');
     Route::get('{id}/view-edit-user', [UserController::class, 'viewEditUser'])->name('user.view-edit');
     Route::post('/store-user', [UserController::class, 'storeUser'])->name('user.store');
     Route::delete('{id}/delete-user', [UserController::class, 'deleteUser'])->name('user.delete');
+
+    // Tour
+    Route::prefix('tour')->group(function () {
+        Route::get('/', function () {
+            return view('admin.tour.index');
+        })->name('tour.index');
+        Route::get('/add', [TourController::class, 'viewCreateTour'])->name('tour.view-create');
+    });
+
+
+    Route::get('/list-tour', [TourController::class, 'listTours'])->name('tour.list');
+    Route::get('{id}/view-edit-tour', [TourController::class, 'viewEditTour'])->name('tour.view-edit');
+    Route::post('/create-tour', [TourController::class, 'createTour'])->name('tour.create');
+    Route::delete('{id}/delete-tour', [TourController::class, 'deleteTour'])->name('tour.delete');
 });
