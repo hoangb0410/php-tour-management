@@ -18,12 +18,9 @@
                     <th scope="col">Destination</th>
                     <th scope="col">Departure Time</th>
                     <th scope="col">Type</th>
-                    <th scope="col">Number of guest</th>
+                    <th scope="col">Guest</th>
                     <th scope="col">Price</th>
                     <th scope="col">Rating</th>
-                    {{-- <th scope="col">Overview</th>
-                    <th scope="col">Inclusion</th>
-                    <th scope="col">Additional Info</th> --}}
                     <th scope="col">Handle</th>
                 </tr>
             </thead>
@@ -45,6 +42,7 @@
                 {
                     data: 'name',
                     name: 'name',
+                    width: '20%',
                     orderable: false,
                     searchable: true,
                     class: 'align-middle'
@@ -101,6 +99,7 @@
                 {
                     data: 'action',
                     name: 'action',
+                    width: '10%',
                     orderable: false,
                     searchable: false
                 },

@@ -32,6 +32,16 @@ class CreateTourRequest extends FormRequest
             'overview' => 'required|string',
             'inclusion' => 'required|string',
             'additional_info' => 'nullable|string',
+            'departure_points' => 'required|array',
+            'departure_points.*' => 'required|string|max:255',
+            'itineraries' => 'required|array',
+            'itineraries.*.day' => 'required|integer|min:1',
+            'itineraries.*.place' => 'required|string|max:255',
+            'itineraries.*.stops' => 'required|array',
+            'itineraries.*.stops.*.stop_name' => 'required|string|max:255',
+            'itineraries.*.stops.*.description' => 'required|string',
+            'itineraries.*.stops.*.duration' => 'required|string|max:255',
+            'itineraries.*.stops.*.admission_info' => 'nullable|string|max:255',
         ];
     }
 }

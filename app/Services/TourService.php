@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Helpers\Common;
 use App\Repositories\TourRepository;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Log;
 use Yajra\DataTables\Facades\DataTables;
 
 use function App\Helpers\uploadImages;
@@ -91,15 +92,68 @@ class TourService
 
         if ($request->hasFile('images')) {
             $uploadedFilePaths = uploadImages($request->file('images'));
-    
             foreach ($uploadedFilePaths as $filePath) {
                 $tour->images()->create(['url' => $filePath]);
+            }
+        }
+
+        // Create multiple Departure Points
+        if ($request->departure_points) {
+            foreach ($request->departure_points as $departurePoint) {
+                $tour->departurePoints()->create([
+                    'address' => $departurePoint
+                ]);
+            }
+        }
+
+        // Create multiple Itineraries and Stops
+        if ($request->itineraries) {
+            foreach ($request->itineraries as $itineraryData) {
+                $itinerary = $tour->tourItineraries()->create([
+                    'day' => $itineraryData['day'],
+                    'place' => $itineraryData['place']
+                ]);
+
+                if (isset($itineraryData['stops'])) {
+                    foreach ($itineraryData['stops'] as $stopData) {
+                        $itinerary->stops()->create([
+                            'stop_name' => $stopData['stop_name'],
+                            'description' => $stopData['description'],
+                            'duration' => $stopData['duration'],
+                            'admission_info' => $stopData['admission_info']
+                        ]);
+                    }
+                }
             }
         }
     }
 
     public function deleteTour($id)
     {
-        $this->tourRepository->delete($id);
+        $tour = $this->tourRepository->getById($id);
+
+        if ($tour) {
+            // Delete related images
+            foreach ($tour->images as $image) {
+                $image->delete();
+            }
+
+            // Delete related departure points
+            foreach ($tour->departurePoints as $departurePoint) {
+                $departurePoint->delete();
+            }
+
+            // Delete related itineraries and their stops
+            foreach ($tour->tourItineraries as $itinerary) {
+                // Delete related stops for this itinerary
+                foreach ($itinerary->stops as $stop) {
+                    $stop->delete();
+                }
+                $itinerary->delete();
+            }
+
+            // Delete the tour
+            $this->tourRepository->delete($id);
+        }
     }
 }

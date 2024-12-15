@@ -4,8 +4,10 @@
     @include('admin.layouts.header')
     <div class="container">
         <h1 class="mt-3 mb-3">Add new tour</h1>
-        <form method="POST" action="{{ route('tour.create') }}" id="createTourForm" class="row">
+        <form enctype="multipart/form-data" method="POST" action="{{ route('tour.create') }}" id="createTourForm"
+            class="row">
             @csrf
+            <h4>Tour Information</h4>
             <div class="col-6">
                 <div class="form-group mb-3">
                     <label for="createName">Name</label>
@@ -80,6 +82,13 @@
                     <p class="p-error valid_error-additional_info text-danger"></p>
                 </div>
             </div>
+            <hr>
+            <h4>Departure & Return</h4>
+            @include('admin.tour.components.departure-points')
+            <hr>
+            <h4>Tour Itinerary</h4>
+            @include('admin.tour.components.tour-itinerary')
+            <hr>
         </form>
         <button type="button" class="btn form-button mb-3" style="padding: 10px 40px" id="createTourButton">Save</button>
     </div>
@@ -101,6 +110,69 @@
             });
         });
 
+        $(document).ready(function() {
+            $('#add-departure-point').on('click', function() {
+                var container = $('#departure-points-container');
+                var input = $('<input>')
+                    .attr('type', 'text')
+                    .attr('name', 'departure_points[]')
+                    .addClass('form-control mb-2');
+                container.append(input);
+            });
+        });
+
+        var itineraryIndex = 1;
+
+        $('#add-itinerary').on('click', function() {
+            var container = $('#itineraries-container');
+
+            // Create itinerary section (left column)
+            var itinerary = $('<div>').addClass('col-6 itinerary');
+            itinerary.append('<p>Tour Itinerary</p>');
+            itinerary.append('<input type="text" class="form-control mb-2" name="itineraries[' + itineraryIndex +
+                '][day]" placeholder="Day" required>');
+            itinerary.append('<input type="text" class="form-control mb-2" name="itineraries[' + itineraryIndex +
+                '][place]" placeholder="Place" required>');
+
+            // Create stops section (right column)
+            var stopsContainer = $('<div>').addClass('col-6 stops-container');
+            stopsContainer.append('<p>Stops</p>');
+            stopsContainer.append('<input type="text" class="form-control mb-2" name="itineraries[' +
+                itineraryIndex + '][stops][0][stop_name]" placeholder="Stop Name" required>');
+            stopsContainer.append('<input type="text" class="form-control mb-2" name="itineraries[' +
+                itineraryIndex + '][stops][0][description]" placeholder="Description" required>');
+            stopsContainer.append('<input type="text" class="form-control mb-2" name="itineraries[' +
+                itineraryIndex + '][stops][0][duration]" placeholder="Duration" required>');
+            stopsContainer.append('<input type="text" class="form-control mb-2" name="itineraries[' +
+                itineraryIndex + '][stops][0][admission_info]" placeholder="Admission Info" required>');
+
+            // Add 'Add Another Stop' button
+            stopsContainer.append(
+                '<button type="button" class="btn outline-button add-stop mb-3">Add Another Stop</button>');
+
+            // Append both itinerary and stops sections to the container
+            container.append(itinerary).append(stopsContainer);
+            itineraryIndex++;
+        });
+
+        // Add stop functionality
+        $(document).on('click', '.add-stop', function() {
+            var stopsContainer = $(this).parent();
+            var itineraryIndex = stopsContainer.index() / 2; // Match the index with the parent itinerary
+            var stopIndex = stopsContainer.find('input[name*="stops"]').length / 4; // Find next stop index
+
+            stopsContainer.append('<input type="text" class="form-control mb-2" name="itineraries[' +
+                itineraryIndex + '][stops][' + stopIndex + '][stop_name]" placeholder="Stop Name" required>');
+            stopsContainer.append('<input type="text" class="form-control mb-2" name="itineraries[' +
+                itineraryIndex + '][stops][' + stopIndex + '][description]" placeholder="Description" required>'
+            );
+            stopsContainer.append('<input type="text" class="form-control mb-2" name="itineraries[' +
+                itineraryIndex + '][stops][' + stopIndex + '][duration]" placeholder="Duration" required>');
+            stopsContainer.append('<input type="text" class="form-control mb-2" name="itineraries[' +
+                itineraryIndex + '][stops][' + stopIndex +
+                '][admission_info]" placeholder="Admission Info" required>');
+        });
+
         //Submit form button event
         $('#createTourButton').on('click', function(e) {
             $('#createTourForm').submit();
@@ -110,14 +182,18 @@
         $('#createTourForm').on('submit', function(e) {
             e.preventDefault();
             $('.p-error').text('');
-            const formData = $(this).serialize() + '&_token={{ csrf_token() }}';
+            const formData = new FormData(this);
             $.ajax({
                 url: $(this).attr('action'),
                 type: $(this).attr('method'),
                 data: formData,
+                contentType: false,
+                processData: false,
                 success: function(response) {
-                    showVanillaToast(response.message, response.alert)
-                    window.location.href = "{{ route('tour.index') }}";
+                    showVanillaToast(response.message, response.alert);
+                    setTimeout(function() {
+                        window.location.href = "{{ route('tour.index') }}";
+                    }, 1000);
                 },
                 error: function(xhr, status, error) {
                     formValidAjax(xhr);

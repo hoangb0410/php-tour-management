@@ -7,6 +7,7 @@ use App\Http\Requests\CreateTourRequest;
 use App\Services\DestinationService;
 use App\Services\TourService;
 use App\Services\TourTypeService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class TourController extends Controller
@@ -39,13 +40,13 @@ class TourController extends Controller
         return view('admin.tour.add-tour', compact('tourTypes', 'destinations'));
     }
 
-    public function viewEditTour($id)
-    {
-        $tour = $this->tourService->viewEditTour($id);
-        return response()->json([
-            'tour' => $tour
-        ]);
-    }
+    // public function viewEditTour(Request $request)
+    // {
+    //     $tourTypes = $this->tourTypeService->getAllTourTypes();
+    //     $destinations = $this->destinationService->getAllDestinations();
+    //     $tour = $request->id ? $this->tourService->viewEditTour($request->id) : null;
+    //     return view('admin.tour.add-tour', compact('tourTypes', 'destinations', 'tour'));
+    // }
 
     public function createTour(CreateTourRequest $request)
     {
